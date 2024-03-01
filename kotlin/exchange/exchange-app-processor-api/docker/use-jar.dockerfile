@@ -20,10 +20,10 @@ RUN curl -o mongodb-shell.rpm https://downloads.mongodb.com/compass/mongodb-mong
     rm mongodb-shell.rpm
 
 # We make four distinct layers so if there are application changes the library layers can be re-used
-COPY --chown=185 ./exchange-app-processor-api/build/quarkus-app/lib/ /deployments/lib/
-COPY --chown=185 ./exchange-app-processor-api/build/quarkus-app/*.jar /deployments/
-COPY --chown=185 ./exchange-app-processor-api/build/quarkus-app/app/ /deployments/app/
-COPY --chown=185 ./exchange-app-processor-api/build/quarkus-app/quarkus/ /deployments/quarkus/
+COPY --chown=185 ./exchange-app-api-yantar/build/quarkus-app/lib/ /deployments/lib/
+COPY --chown=185 ./exchange-app-api-yantar/build/quarkus-app/*.jar /deployments/
+COPY --chown=185 ./exchange-app-api-yantar/build/quarkus-app/app/ /deployments/app/
+COPY --chown=185 ./exchange-app-api-yantar/build/quarkus-app/quarkus/ /deployments/quarkus/
 
 EXPOSE 8080
 USER 185

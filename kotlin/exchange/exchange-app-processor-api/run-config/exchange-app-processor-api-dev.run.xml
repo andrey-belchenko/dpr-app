@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="exchange-app-processor-api-dev" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="exchange-app-api-yantar-dev" type="GradleRunConfiguration" factoryName="Gradle">
     <ExternalSystemSettings>
       <option name="env">
         <map>
@@ -16,7 +16,7 @@
         </map>
       </option>
       <option name="executionName" />
-      <option name="externalProjectPath" value="$PROJECT_DIR$/exchange-app-processor-api" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$/exchange-app-api-yantar" />
       <option name="externalSystemIdString" value="GRADLE" />
       <option name="scriptParameters" value="" />
       <option name="taskDescriptions">

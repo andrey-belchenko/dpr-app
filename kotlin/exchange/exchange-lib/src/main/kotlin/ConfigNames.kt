@@ -1,9 +1,9 @@
-package cc.datafabric.adapter.lib.sys
+package cc.datafabric.exchange.lib
 
 
 //todo разобраться как это сделать правильно
 // как минимум убрать отсюда константы которые не используются в библиотеке непосредственно
-// + копирую файл из adapter-lib в adapter-lib-sys т.к. не удалось подключить adapter-lib в test-extensions-consumer
+// + копирую файл из adapter-lib в exchange-lib т.к. не удалось подключить adapter-lib в test-extensions-consumer
 object ConfigNames {
 
 

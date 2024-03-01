@@ -1,4 +1,4 @@
-package cc.datafabric.adapter.lib.sys
+package cc.datafabric.exchange.lib
 
 object Config {
 

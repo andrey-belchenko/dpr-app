@@ -38,8 +38,7 @@ dependencies {
 //    testImplementation("io.quarkus:quarkus-junit5")
 //    testImplementation("io.rest-assured:rest-assured")
 
-    implementation(project(":adapter-lib-sys"))
-    implementation(project(":adapter-lib-exchange"))
+    implementation(project(":exchange-lib"))
 }
 
 java {
