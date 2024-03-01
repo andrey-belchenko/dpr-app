@@ -1,8 +1,0 @@
-services:
-  adapter-sandbox-app-sk-ping:
-    env_file:
-      - ./adapter-sandbox-app-sk-ping/env/DockerLocal.env
-    build: 
-      context: .
-      dockerfile: ./adapter-sandbox-app-sk-ping/docker/use-jar.dockerfile
-    image: adapter-sandbox-app-sk-ping
