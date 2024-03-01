@@ -1,0 +1,87 @@
+[versions]
+# ATTENTION: The Kotlin version must be in synch with the Quarkus version!
+kotlin = "1.7.22"
+kotlinx_serialization = "1.4.1"
+kotlinx_coroutines_core = "1.6.4"
+kafka = "2.6.0"
+jena = "4.4.0"
+junit5 = "5.9.1"
+picocli = "4.5.1"
+slf4j = "1.7.36"
+shacl = "1.4.2"
+mongodb_driver = "4.8.2"
+mongodb_java_server = "1.43.0"
+netty = "4.1.76.Final"
+rdf_patch = "1.1.0"
+log4j = "2.18.0"
+jackson = "2.14.2"
+mockk = "1.13.4"
+commons_text = "1.9"
+kotlin_csv = "1.9.0"
+postgresql = "42.5.4"
+testcontainers = "1.17.6"
+liquibase = "4.11.0"
+hikari = "5.0.1"
+tescontainers_ext = "1.3.4"
+keycloak = "20.0.1"
+wiremock = "2.35.0"
+micrometer = "1.10.4"
+quarkus_micrometer_registry_otlp = "2.12.0"
+
+[libraries]
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx_serialization" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx_serialization" }
+kotlinx-serialization-cbor = { module = "org.jetbrains.kotlinx:kotlinx-serialization-cbor", version.ref = "kotlinx_serialization" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx_coroutines_core" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx_coroutines_core" }
+
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+log4j-slf4j = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j" }
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-yaml = { module = "com.fasterxml.jackson.dataformat:jackson-dataformat-yaml", version.ref = "jackson" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-module-java-time = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+jena-core = { module = "org.apache.jena:jena-core", version.ref = "jena" }
+jena-text = { module = "org.apache.jena:jena-text", version.ref = "jena" }
+jena-arq = { module = "org.apache.jena:jena-arq", version.ref = "jena" }
+jena-shacl = { module = "org.apache.jena:jena-shacl", version.ref = "jena" }
+jena-fuseki = { module = "org.apache.jena:jena-fuseki-main", version.ref = "jena" }
+jena-querybuilder = { module = "org.apache.jena:jena-querybuilder", version.ref = "jena" }
+shacl = { module = "org.topbraid:shacl", version.ref = "shacl" }
+rdf-delta = { module = "org.seaborne.rdf-delta:rdf-patch", version.ref = "rdf_patch" }
+apache-commons-text = { module = "org.apache.commons:commons-text", version.ref = "commons_text" }
+kotlin-csv = { module = "com.github.doyaaaaaken:kotlin-csv-jvm", version.ref = "kotlin_csv" }
+netty = { module = "io.netty:netty-all", version.ref = "netty" }
+picocli = { module = "info.picocli:picocli", version.ref = "picocli" }
+mongodb-driver-sync = { module = "org.mongodb:mongodb-driver-sync", version.ref = "mongodb_driver" }
+mongodb-java-server = { module = "de.bwaldvogel:mongo-java-server", version.ref = "mongodb_java_server" }
+postgresql = { module = "org.postgresql:postgresql", version.ref = "postgresql" }
+hikari-cp = { module = "com.zaxxer:HikariCP", version.ref = "hikari" }
+jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit5" }
+jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit5" }
+jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit5" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+tescontainers-core = { module = "org.testcontainers:testcontainers", version.ref = "testcontainers" }
+tescontainers-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+tescontainers-cockroach = { module = "org.testcontainers:cockroachdb", version.ref = "testcontainers" }
+tescontainers-kafka = { module = "org.testcontainers:kafka", version.ref = "testcontainers" }
+tescontainers-ext = { module = "io.kotest.extensions:kotest-extensions-testcontainers", version.ref = "tescontainers_ext" }
+liquibase-core = { module = "org.liquibase:liquibase-core", version.ref = "liquibase" }
+kafka-streams = { module = "org.apache.kafka:kafka-streams", version.ref = "kafka" }
+kafka-streamsTestUtil = { module = "org.apache.kafka:kafka-streams-test-utils", version.ref = "kafka" }
+kafka-clients = { module = "org.apache.kafka:kafka-clients", version.ref = "kafka" }
+keycloak-services = { module = "org.keycloak:keycloak-services", version.ref = "keycloak" }
+keycloak-server-spi = { module = "org.keycloak:keycloak-server-spi", version.ref = "keycloak" }
+keycloak-server-spi-private = { module = "org.keycloak:keycloak-server-spi-private", version.ref = "keycloak" }
+wiremock-jre8-standalone = { module = "com.github.tomakehurst:wiremock-jre8-standalone", version.ref = "wiremock" }
+micrometer-core = { module = "io.micrometer:micrometer-core", version.ref = "micrometer" }
+quarkus-micrometer-registry-otlp = { module = "io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-otlp", version.ref = "quarkus_micrometer_registry_otlp" }
+
+[bundles]
+log = ["log4j-api", "log4j-core", "log4j-slf4j", "jackson-databind", "jackson-yaml"]
+jena = ["jena-core", "jena-text", "jena-arq", "jena-querybuilder"]
+testcontainers = ["tescontainers-core", "tescontainers-junit", "tescontainers-cockroach", "tescontainers-kafka", "tescontainers-ext"]
+keycloak-spi = ["keycloak-services", "keycloak-server-spi", "keycloak-server-spi-private"]

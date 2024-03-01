@@ -1,0 +1,80 @@
+quarkus:
+  http:
+    port: 9911
+  opentelemetry:
+    enabled: false
+  micrometer:
+    export:
+      otlp:
+        enabled: false
+
+extensions:
+  config-file: C:/Repos/datafabric/adapter-lite/extension/config/extensions/config.json
+
+database:
+  url: jdbc:postgresql://crdb.oastu.lan:26257/test3?sslmode=disable
+  user: roach
+  password: charo
+
+mongo:
+  url: mongodb://root:eximer@mongodb.mrsk.oastu.lan:27017
+  database: exchange-test-ext
+  socket-connect-timeout-msec: 360000
+
+exchange:
+  mongo-url: mongodb://root:eximer@mongodb.mrsk.oastu.lan:27017
+#  mongo-url: mongodb://localhost:27017
+  mongo-database: exchange-test-ext
+  work-dir: C:/Bin/exchange
+  profile-version: http://ontology.adms.ru/UIP/md/2023-4#
+
+app:
+  transport:
+    topic:
+  ## backdoor to rollback changes (e.g. after import cimxml)
+  unsafe:
+    allow-clear-database: false
+
+## Blazegraph
+sparql:
+  endpoint: http://bg-test3.test.oastu.lan/blazegraph/namespace/kb/sparql
+#  dataset-file: C:/Repos/datafabric/adapter-lite/extension/config/sparql/dataset.trig
+
+## Tasks service
+tasks:
+  ## path to the root directory with output files ('tmp' for system temporary dir),
+  ## used as web-root for static resources ($root-directory + '/tasks/out')
+  root-directory: tmp
+  ## path to the directory to store tasks ('tmp' for system temporary dir)
+  store-directory: tmp
+  ## 24 hours: 24*60*60*1000
+  max-duration-in-mills: 86400000
+  ## week: 7*24*60*60*1000
+  cache-expiration-timeout-in-mills: 604800000
+  ## coroutine parallelism to avoid connection leaks, by default it is default size of hikari pool connections
+  coroutine-parallelism: 8
+  ## the number of entities or links per butch operation (upsertGraphEntities or createGraphLinks)
+  full-import-chunk-size: 100
+  
+## Vocabulary
+#vocabulary:
+#  notification-topic: key-created
+#  notification-mode: kafka
+  
+## Deployment configuration
+deployment:
+  ## path to the root directory where file for deployment will be created ('tmp' for system temporary dir)
+  output-directory: tmp
+  ## schedule to delete obsolete deployment data file (tar.gz)
+  cleanup: 0 0 1 ? * * *
+  ## Configuration IRI that should be used as the active one.
+  ## This property is supposed to be used for development purposes only!
+#  configuration-iri: http://ontology.adms.ru/UIP/platform/cfg#PlatformConfiguration_00000523599098453921608
+  
+## Platform Audit
+audit-logger:
+  mode: slf4j
+
+#kafka:
+#  bootstrap:
+#    servers: localhost:9094

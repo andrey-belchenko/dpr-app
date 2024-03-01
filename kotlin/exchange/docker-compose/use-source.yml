@@ -1,0 +1,11 @@
+services:
+  adapter-kisur-incoming:
+    env_file:
+      - ./adapter-app-rabbit-incoming/env/DockerLocal.env
+    volumes:
+      - C:\Repos\datafabric\adapter-lite\mongo-pipelines\kisur-incoming:/pipelines
+    restart: on-failure
+    build: 
+      context: .
+      dockerfile: ./adapter-app-rabbit-incoming/docker/use-source.dockerfile
+    image: adapter-app-rabbit-incoming

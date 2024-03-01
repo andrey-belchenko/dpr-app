@@ -1,0 +1,30 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+dependencies {
+//    implementation(project(":adapter-lib"))
+    implementation(project(":adapter-lib-sys"))
+    implementation(project(":adapter-lib-exchange"))
+//    implementation("com.rabbitmq:amqp-client:5.15.0")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+//    implementation("org.apache.httpcomponents:httpmime:4.3.1")
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
+    implementation("org.jooq:joox:1.6.2")
+}
+
+
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cc.datafabric.exchange.app.con.meter.incoming.MainKt'
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

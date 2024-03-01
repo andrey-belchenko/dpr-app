@@ -1,0 +1,26 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+
+}
+
+dependencies {
+
+    implementation(project(":adapter-lib-sys"))
+//    implementation(project(":adapter-lib"))
+
+
+    //todo убрать лишнее
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.21")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+    implementation('org.apache.kafka:kafka-clients:3.2.1')
+    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("com.github.doyaaaaaken:kotlin-csv:1.6.0")
+    implementation("org.jooq:joox:1.6.2")
+    implementation("com.lordcodes.turtle:turtle:0.6.0")
+
+
+}
+

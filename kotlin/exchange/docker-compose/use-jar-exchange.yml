@@ -1,0 +1,87 @@
+services:
+#  exchange-app-con-rabbit-incoming:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-rabbit.env
+#      - ./exchange-build/package/env/con-rabbit-incoming.env
+#    restart: on-failure
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-rabbit-incoming/docker/use-jar.dockerfile
+#    image: exchange-app-con-rabbit-incoming
+#  exchange-app-con-rabbit-outgoing:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-rabbit.env
+#      - ./exchange-build/package/env/con-rabbit-outgoing.env
+#    restart: on-failure
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-rabbit-outgoing/docker/use-jar.dockerfile
+#    image: exchange-app-con-rabbit-outgoing
+  exchange-app-processor:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/processor.env
+    restart: on-failure
+    volumes:
+      - C:\Repos\datafabric\mrsk-configuration\exchange-configuration:/exchange-settings
+    build:
+      context: .
+      dockerfile: ./exchange-app-processor/docker/use-jar.dockerfile
+    image: exchange-app-processor
+#  exchange-app-con-sk11-outgoing:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-sk11.env
+#      - ./exchange-build/package/env/con-sk11-outgoing.env
+#    restart: on-failure
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-sk11-outgoing/docker/use-jar.dockerfile
+#    image: exchange-app-con-sk11-outgoing
+#  exchange-app-con-sk11-incoming:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-sk11.env
+#      - ./exchange-build/package/env/con-sk11-incoming.env
+#    restart: on-failure
+#    volumes:
+#      - C:\Repos\datafabric\mrsk-configuration\exchange-configuration:/exchange-settings
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-sk11-incoming/docker/use-jar.dockerfile
+#    image: exchange-app-con-sk11-incoming
+#  exchange-app-con-sk11-rest-incoming:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-sk11.env
+#      - ./exchange-build/package/env/con-sk11-rest-incoming.env
+#    restart: on-failure
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-sk11-rest-incoming/docker/use-jar.dockerfile
+#    image: exchange-app-con-sk11-rest-incoming
+#  exchange-app-con-platform-outgoing:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-platform-outgoing.env
+#    restart: on-failure
+#    build:
+#      context: .
+#      dockerfile: ./exchange-app-con-platform-outgoing/docker/use-jar.dockerfile
+#    image: exchange-app-con-platform-outgoing
+#  adapter-sandbox-app-sk-ping:
+#    env_file:
+#      - ./exchange-build/package/env/common.env
+#      - ./exchange-build/package/env/con-sk11.env
+#      - ./exchange-build/package/env/con-sk11-outgoing.env
+#    build:
+#      context: .
+#      dockerfile: ./adapter-sandbox-app-sk-ping/docker/use-jar.dockerfile
+#    image: adapter-sandbox-app-sk-ping
+#  rabbitmq:
+#    ports:
+#      - "5672:5672"
+#      - "15672:15672"
+#    image: rabbitmq:3.10-management

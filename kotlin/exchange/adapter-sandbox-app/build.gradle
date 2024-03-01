@@ -1,0 +1,35 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+dependencies {
+    implementation(project(":adapter-lib"))
+    implementation(project(":adapter-lib-sys"))
+    implementation(project(":adapter-lib-exchange"))
+    implementation("stax:stax-api:1.0.1")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+
+    implementation("org.apache.jena:jena-core:4.5.0")
+    implementation("org.apache.jena:jena-arq:4.5.0")
+
+    implementation("com.lordcodes.turtle:turtle:0.6.0")
+
+    implementation("org.postgresql:postgresql:42.3.2")
+
+    implementation("org.apache.groovy:groovy-jsr223:4.0.6")
+}
+
+
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cc.datafabric.adapter.sandbox.app.MainKt'
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

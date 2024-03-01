@@ -1,0 +1,46 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "kotlin-multiplatform") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:${requested.version}")
+            }
+            if (requested.id.id == "kotlinx-serialization") {
+                useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
+            }
+        }
+    }
+    plugins {
+        // see gradle.properties
+        id "${quarkusPluginId}" version "${quarkusPluginVersion}"
+    }
+    plugins {
+        id "com.github.johnrengelman.shadow" version "7.1.2"
+    }
+}
+
+enableFeaturePreview("VERSION_CATALOGS")
+rootProject.name = "adapter"
+
+include ':exchange-platform-extension'
+include ':test-extensions-consumer'
+include ':exchange-app-processor-api'
+
+include( "adapter-lib-sys")
+include( "adapter-lib")
+include( "adapter-lib-exchange")
+include( "exchange-app-processor")
+include( "exchange-app-con-rabbit-incoming")
+include( "exchange-app-con-rabbit-outgoing")
+include( "exchange-app-con-sk11-outgoing")
+include( "exchange-app-con-sk11-incoming")
+include( "exchange-app-con-sk11-rest-incoming")
+include( "exchange-app-con-platform-outgoing")
+include( "exchange-app-con-sk11-nodes-incoming")
+include( "adapter-sandbox-app")
+include( "adapter-sandbox-app-sk-ping")
+include( "exchange-app-mail")
+include( "exchange-app-con-meter-incoming")
+
+
+
+

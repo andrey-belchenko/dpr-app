@@ -1,0 +1,9 @@
+call ./gradlew exchange-app-con-rabbit-incoming:jar
+call ./gradlew exchange-app-con-rabbit-outgoing:jar
+call ./gradlew exchange-app-processor:jar
+call ./gradlew exchange-app-con-sk11-outgoing:jar
+call ./gradlew exchange-app-con-sk11-incoming:jar
+call ./gradlew exchange-app-con-platform-outgoing:jar
+call ./gradlew adapter-sandbox-app-sk-ping:jar
+call ./gradlew exchange-app-con-sk11-rest-incoming:jar
+call ./gradlew exchange-app-con-sk11-nodes-incoming:jar

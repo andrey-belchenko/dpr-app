@@ -1,0 +1,41 @@
+services:
+  processor:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-processor.env
+    restart: on-failure
+    volumes:
+      - C:\Repos\datafabric\mrsk-configuration\exchange-configuration:/exchange-settings
+    image: exchange-app-processor
+  con-rabbit-incoming:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-con-rabbit.env
+      - ./exchange-build/package/env/exchange-app-con-rabbit-incoming.env
+    restart: on-failure
+    image: exchange-app-con-rabbit-incoming
+  con-rabbit-outgoing:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-con-rabbit.env
+      - ./exchange-build/package/env/exchange-app-con-rabbit-outgoing.env
+    restart: on-failure
+    image: exchange-app-con-rabbit-outgoing
+  con-sk11-incoming:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-con-sk11-incoming.env
+    restart: on-failure
+    image: exchange-app-con-sk11-incoming
+  con-sk11-outgoing:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-con-sk11-outgoing.env
+    restart: on-failure
+    image: exchange-app-con-sk11-outgoing
+  con-platform-outgoing:
+    env_file:
+      - ./exchange-build/package/env/common.env
+      - ./exchange-build/package/env/exchange-app-con-platform-outgoing.env
+    restart: on-failure
+    image: exchange-app-con-platform-outgoing

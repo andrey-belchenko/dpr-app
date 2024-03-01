@@ -1,0 +1,44 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+
+}
+
+dependencies {
+
+    implementation(project(":adapter-lib-sys"))
+//    implementation(project(":adapter-lib-extensions"))
+
+
+    //todo убрать лишнее
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3")
+//    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.3")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.21")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+    implementation('org.apache.kafka:kafka-clients:3.2.1')
+    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+
+    implementation("org.apache.jena:jena-core:4.5.0")
+    implementation("org.apache.jena:jena-arq:4.5.0")
+    implementation("com.github.doyaaaaaken:kotlin-csv:1.6.0")
+
+//    implementation("org.dom4j:dom4j:2.1.3")
+    implementation("org.jooq:joox:1.6.2")
+
+    implementation("org.apache.jena:jena-arq:4.5.0")
+    implementation("org.apache.httpcomponents:httpmime:4.3.1")
+    implementation("com.rabbitmq:amqp-client:5.15.0")
+
+
+    implementation("com.lordcodes.turtle:turtle:0.6.0")
+
+//    implementation("com.google.code.scriptengines:scriptengines-javascript:1.1.1")
+
+//    implementation("org.graalvm:polyglot-tck:0.31")
+//    implementation("org.graalvm.js:js:21.2.0")
+//    implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.20-release-285"
+
+
+}
+

@@ -1,0 +1,41 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.7.22" apply false
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.22' apply false
+    id "org.jetbrains.kotlin.plugin.allopen" version "1.7.22" apply false
+    id 'com.palantir.docker' version '0.22.1' apply false
+}
+
+allprojects {
+    group 'cc.datafabric.platform'
+    // version '2.8.0-SNAPSHOT'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://jitpack.io/' }
+    }
+}
+
+subprojects {
+
+    tasks.withType(KotlinCompile).configureEach {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+
+        kotlinOptions {
+            jvmTarget = "11"
+            languageVersion = "1.7"
+            apiVersion = "1.7"
+        }
+    }
+
+    tasks.withType(Jar).configureEach { duplicatesStrategy = DuplicatesStrategy.INCLUDE }
+}
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs(":libraries")
+    }
+}
+
