@@ -1,0 +1,67 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.22'
+    id 'org.jetbrains.kotlin.plugin.allopen' version '1.7.22'
+    id 'io.quarkus'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+// todo: убрать лишнее
+dependencies {
+    implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    api(libs.micrometer.core)
+//    implementation("io.quarkus:quarkus-opentelemetry")
+//    implementation("io.quarkus:quarkus-micrometer")
+//    implementation(libs.quarkus.micrometer.registry.otlp)
+
+    implementation("io.quarkus:quarkus-kotlin")
+    implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+    implementation("io.quarkus:quarkus-config-yaml")
+//    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("io.quarkus:quarkus-arc")
+//    implementation("io.quarkus:quarkus-kafka-streams")
+    implementation("io.quarkus:quarkus-vertx")
+//    implementation("io.quarkus:quarkus-kafka-client")
+
+    implementation(libs.kotlinx.serialization.json)
+
+//    implementation(libs.mongodb.driver.sync)
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+//    implementation(libs.postgresql)
+//    implementation(libs.hikari.cp)
+//    implementation(libs.bundles.jena)
+    implementation(libs.jackson.module.java.time)
+    implementation(libs.jackson.module.kotlin)
+//    testImplementation("io.quarkus:quarkus-junit5")
+//    testImplementation("io.rest-assured:rest-assured")
+
+    implementation(project(":exchange-lib"))
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+test {
+    useJUnitPlatform()
+}
+
+allOpen {
+    annotation("javax.ws.rs.Path")
+    annotation("javax.enterprise.context.ApplicationScoped")
+//    annotation("io.quarkus.test.junit.QuarkusTest")
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11
+    kotlinOptions.javaParameters = true
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11
+}
+

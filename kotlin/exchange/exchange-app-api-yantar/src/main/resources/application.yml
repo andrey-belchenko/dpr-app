@@ -1,0 +1,11 @@
+quarkus:
+  http:
+    port: 9911
+    cors:
+      ~: true
+      origins: "*"
+      methods: "GET, POST, DELETE, PUT"
+      headers: "*"
+
+
+

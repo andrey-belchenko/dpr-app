@@ -1,0 +1,7 @@
+[
+  {
+    "path" : "../../extensions-test/build/libs/extensions-test-2.8.0-SNAPSHOT.jar",
+    "kind" : "cc.datafabric.extensions.api.factory.ServicesAwareExtensionFactory",
+    "classes" : [ "cc.datafabric.extensions.factory.PipelineExtensionFactory" ]
+  }
+]
