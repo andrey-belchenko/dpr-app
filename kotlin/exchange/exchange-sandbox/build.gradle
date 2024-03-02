@@ -1,0 +1,22 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+}
+
+dependencies {
+    implementation(project(":exchange-lib"))
+    implementation(project(":exchange-lib-yantar"))
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+}
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'cc.datafabric.exchange.app.con.rabbit.incoming.MainKt'
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

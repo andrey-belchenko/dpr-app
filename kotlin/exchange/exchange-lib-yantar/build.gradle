@@ -1,0 +1,22 @@
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java'
+    id 'maven-publish'
+}
+
+dependencies {
+    //todo убрать лишнее
+    implementation(project(":exchange-lib"))
+    implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.3")
+    runtimeOnly("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
+    implementation("org.mongodb:mongodb-driver-sync:4.8.2")
+    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("org.jooq:joox:1.6.2")
+    implementation("org.reflections:reflections:0.10.2")
+    implementation ("org.jetbrains.kotlin:kotlin-reflect:1.5.10")
+    implementation ('com.google.code.gson:gson:2.10.1')
+}
+
+
