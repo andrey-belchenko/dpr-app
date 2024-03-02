@@ -19,26 +19,3 @@ dependencies {
 
 
 }
-
-//publishing {
-//    publications {
-//        library(MavenPublication) {
-//            from components.java
-//        }
-//    }
-//    repositories {
-//        maven {
-//            url "http://192.168.0.7:8080/api/v4/projects/25/packages/maven"
-//            allowInsecureProtocol = true
-//            name "GitLab"
-//            credentials(HttpHeaderCredentials) {
-//                name = 'Deploy-Token'
-//                value = adpDeployToken
-//            }
-//            authentication {
-//                header(HttpHeaderAuthentication)
-//            }
-//        }
-//    }
-//}
-

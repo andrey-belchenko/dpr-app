@@ -19,10 +19,12 @@ pluginManagement {
 }
 
 enableFeaturePreview("VERSION_CATALOGS")
-rootProject.name = "adapter"
+rootProject.name = "exchange"
 
 include ':exchange-app-api-yantar'
 include( "exchange-lib")
+include( "exchange-lib-yantar")
+include( "exchange-sandbox")
 
 
 
