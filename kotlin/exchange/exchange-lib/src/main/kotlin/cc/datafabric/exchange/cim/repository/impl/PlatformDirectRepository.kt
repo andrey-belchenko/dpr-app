@@ -84,6 +84,7 @@ class PlatformDirectRepository : Repository {
         addFilter(whereClause,"toIri",filter.toId)
         addFilter(whereClause,"fromType",filter.fromType)
         addFilter(whereClause,"toType",filter.toType)
+        addFilter(whereClause,"predicate",filter.predicate)
         val query = """
             select * from
                 "Links" e
