@@ -1,5 +1,4 @@
 package cc.datafabric.exchange.cim.model
-import cc.datafabric.linesapp.sys.model.ModelObject
 import kotlin.reflect.KProperty
 
 class ValueDelegate<T>() {

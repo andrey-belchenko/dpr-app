@@ -1,6 +1,4 @@
-package cc.datafabric.linesapp.sys.model
-
-import cc.datafabric.exchange.cim.model.DataSet
+package cc.datafabric.exchange.cim.model
 
 open class ModelObject {
 

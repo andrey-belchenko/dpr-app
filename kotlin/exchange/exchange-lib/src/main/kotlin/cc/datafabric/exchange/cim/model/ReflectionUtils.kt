@@ -1,6 +1,5 @@
-package cc.datafabric.linesapp.sys.model
+package cc.datafabric.exchange.cim.model
 
-import cc.datafabric.exchange.cim.model.Links
 import org.reflections.Reflections
 import kotlin.reflect.KClass
 import kotlin.reflect.KMutableProperty

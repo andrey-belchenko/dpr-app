@@ -261,7 +261,7 @@ def generateKotlinClasses(classInfoList: list[ClassInfo], folder: str):
             hasValProp = False
 
             baseClass = baseClassName
-            if classInfo.subClassOf != None:
+            if classInfo.subClassOf != None and classInfo.subClassOf.name != "Entity":
                 baseClass = classInfo.subClassOf.name
             else:
                 headerText += f"import {sysPackage}.ModelObject\n"
@@ -346,6 +346,7 @@ classInfoList = getClassInfoList(
     root,
     [
         "Substation",
+        "InfSupplyCenter",
         # "Disconnector",
         # "Breaker",
         # "GroundDisconnector",
@@ -362,7 +363,7 @@ classInfoList = getClassInfoList(
 )
 generateKotlinClasses(
     classInfoList,
-    "C:\Repos\datafabric\platform\lines-app\src\main\kotlin\cc\datafabric\linesapp\scenario\model\data",
+    trgFolderPath,
 )
 
 

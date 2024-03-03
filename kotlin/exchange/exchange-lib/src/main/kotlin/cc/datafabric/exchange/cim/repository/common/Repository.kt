@@ -1,4 +1,4 @@
-package cc.datafabric.linesapp.sys.repository.common
+package cc.datafabric.exchange.cim.repository.common
 
 import cc.datafabric.exchange.cim.repository.common.dto.*
 import cc.datafabric.linesapp.sys.repository.common.dto.*

@@ -1,8 +1,6 @@
 package cc.datafabric.exchange.cim.model
 
 
-import cc.datafabric.linesapp.sys.model.ModelObject
-import cc.datafabric.linesapp.sys.model.ReflectionUtils
 import kotlin.reflect.KProperty
 
 

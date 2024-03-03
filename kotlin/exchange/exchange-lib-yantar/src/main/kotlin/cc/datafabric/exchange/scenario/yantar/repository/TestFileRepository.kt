@@ -1,7 +1,7 @@
 package cc.datafabric.linesapp.scenario.repository
 
 import cc.datafabric.exchange.cim.repository.common.dto.*
-import cc.datafabric.linesapp.sys.repository.common.Repository
+import cc.datafabric.exchange.cim.repository.common.Repository
 import cc.datafabric.linesapp.sys.repository.common.dto.*
 import cc.datafabric.linesapp.sys.repository.common.query.Query
 import java.io.BufferedWriter

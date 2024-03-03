@@ -1,8 +1,8 @@
 package cc.datafabric.exchange.cim.utils
 
 import cc.datafabric.exchange.cim.model.DataSet
-import cc.datafabric.linesapp.sys.model.ModelObject
-import cc.datafabric.linesapp.sys.model.ReflectionUtils
+import cc.datafabric.exchange.cim.model.ModelObject
+import cc.datafabric.exchange.cim.model.ReflectionUtils
 import cc.datafabric.exchange.cim.repository.common.dto.RepositoryDataSet
 import cc.datafabric.exchange.cim.repository.common.dto.RepositoryEntity
 import cc.datafabric.exchange.cim.repository.common.dto.RepositoryLink
@@ -34,7 +34,7 @@ object DataSetMapper {
         return dataSet
     }
 
-    private fun copyExtraProps (source:ModelObject, target: RepositoryEntity){
+    private fun copyExtraProps (source: ModelObject, target: RepositoryEntity){
         source.extraProperties.forEach {
             val item = it.value
             val value = if (item is ModelObject) {

@@ -2,7 +2,7 @@ package cc.datafabric.linesapp.sys.repository.common.query
 
 import cc.datafabric.exchange.cim.repository.common.query.LinkQuery
 import cc.datafabric.exchange.cim.repository.common.query.SubQuery
-import cc.datafabric.linesapp.sys.model.ReflectionUtils
+import cc.datafabric.exchange.cim.model.ReflectionUtils
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 
