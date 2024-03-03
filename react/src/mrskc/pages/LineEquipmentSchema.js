@@ -8,7 +8,7 @@ import Diagram, {
   CustomShape,
 } from "devextreme-react/diagram";
 
-import { createDataSource, createArrayStore } from "src/common/data/apiClient";
+import { createDataSource, createArrayStore } from "src/common/data/mongo-api";
 import { renderEnd, renderNode, renderSwitch } from "./LineSegmentSchema";
 
 import { useParams } from "react-router-dom";

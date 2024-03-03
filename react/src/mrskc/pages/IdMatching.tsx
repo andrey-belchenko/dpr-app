@@ -4,7 +4,7 @@ import { Editing, Item } from "devextreme-react/data-grid";
 import {
   sendModifyRequest,
   sendModifyRequestGetJson,
-} from "src/common/data/apiClient";
+} from "src/common/data/mongo-api";
 import { Workbook } from "exceljs";
 import notify from "devextreme/ui/notify";
 import DialogOkCancel from "../../common/components/dialog/DialogOkCancel";

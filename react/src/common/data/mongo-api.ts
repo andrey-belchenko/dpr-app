@@ -11,7 +11,7 @@ export interface DataSourceOptions {
   database?: string;
 }
 const cookies = new Cookies();
-function getDatabase() {
+export function getDatabase() {
   return cookies.get("database") || "exchange"; // временно
 }
 
@@ -22,7 +22,7 @@ function handleErrors(response: any) {
   return response;
 }
 
-function getQueryApiUrl() {
+export function getQueryApiUrl() {
   return process.env.REACT_APP_adp_qry_api_url;
 
   // return env.REACT_APP_adp_api_url;
@@ -263,54 +263,5 @@ export const createDataSource = (
   return customDataSource;
 };
 
-// export const downloadFile = (fileEntityId: string, fileName: string, openInNeTab:boolean=false) => {
-//   let database = getDatabase();
-//   let url = `${getQueryApiUrl()}/file/${database}/${fileEntityId}`;
-//   fetch(url)
-//     .then(handleErrors)
-//     .then(async (response:any) => await response.blob())
-//     .then((blob: any) => {
-//       const url = window.URL.createObjectURL(new Blob([blob]));
 
-//         const link = document.createElement("a");
-//         link.href = url;
 
-//         if (openInNeTab){
-//           link.setAttribute("target",  '_blank');
-//         }else{
-//           link.setAttribute("download", fileName);
-//         }
-//         document.body.appendChild(link);
-//         link.click();
-//         link.parentNode?.removeChild(link);
-
-//     })
-//     .catch((error:any) => {
-//       notify("Network error", "error", 1000 * 5);
-//       throw "Network error";
-//     });
-// };
-
-export const downloadFile = (
-  fileEntityId: string,
-  fileName: string,
-  open: boolean = false
-) => {
-  let database = getDatabase();
-
-  let url = `${getQueryApiUrl()}/file/${database}/${fileEntityId}`;
-  if (open) {
-    url += "/" + encodeURIComponent(fileName);
-  }
-
-  const link = document.createElement("a");
-  link.href = url;
-  if (open) {
-    link.setAttribute("target", "_blank");
-  } else {
-    link.setAttribute("download", fileName);
-  }
-  document.body.appendChild(link);
-  link.click();
-  link.parentNode?.removeChild(link);
-};

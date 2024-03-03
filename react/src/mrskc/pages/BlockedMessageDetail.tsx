@@ -3,7 +3,7 @@ import { TabPanel, Item } from "devextreme-react/tab-panel";
 // import Form from 'devextreme-react/form';
 import ReactJson from "react-json-view";
 import DataGrid, { Column } from "devextreme-react/data-grid";
-import { createArrayStore, getObject } from "src/common/data/apiClient";
+import { createArrayStore, getObject } from "src/common/data/mongo-api";
 
 interface Props {
   data: {

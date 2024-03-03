@@ -5,7 +5,7 @@ import React from "react";
 //   Scrolling,
 //   SearchPanel,
 // } from "devextreme-react/data-grid";
-import { createDataSource } from "src/common/data/apiClient";
+import { createDataSource } from "src/common/data/mongo-api";
 // import { TreeList } from "devextreme-react";
 import TreeList, {
   Column,

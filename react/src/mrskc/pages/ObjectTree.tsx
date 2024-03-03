@@ -6,7 +6,7 @@ import React, {
   useMemo,
 } from "react";
 
-import { createDataSource } from "src/common/data/apiClient";
+import { createDataSource } from "src/common/data/mongo-api";
 // import { TreeList } from "devextreme-react";
 import TreeList, { Column, Item } from "devextreme-react/tree-list";
 import Tree from "src/mrskc/components/Tree";

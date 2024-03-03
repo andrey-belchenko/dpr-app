@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TabPanel, Item } from "devextreme-react/tab-panel";
 import DataGrid, { Column, MasterDetail } from "devextreme-react/data-grid";
-import { getArray } from "src/common/data/apiClient";
+import { getArray } from "src/common/data/mongo-api";
 import KeyProcessingLogMessageDetail from "./KeyProcessingLogMessageDetail";
 
 interface Props {

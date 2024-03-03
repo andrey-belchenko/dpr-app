@@ -25,7 +25,7 @@ import DataGrid, {
   Sorting,
   RemoteOperations,
 } from "devextreme-react/data-grid";
-import { createDataSource, getArray } from "src/common/data/apiClient";
+import { createDataSource, getArray } from "src/common/data/mongo-api";
 import Button from "devextreme-react/button";
 import { exportGridToExcel } from "src/common/utils/export-grid";
 import { clearState } from "src/common/utils/grid-state";

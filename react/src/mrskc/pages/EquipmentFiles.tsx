@@ -3,7 +3,8 @@ import DataGrid from "devextreme-react/data-grid";
 import React, { useEffect, useRef, useState } from "react";
 import ButtonCell from "src/mrskc/components/ButtonCell";
 import Grid, { GridRef } from "src/common/components/grid/Grid";
-import { createArrayStore, downloadFile, getArray } from "src/common/data/apiClient";
+import { createArrayStore, getArray } from "src/common/data/mongo-api";
+import { downloadFile } from "src/common/data/sap-files-api";
 const columns = [
   {
     // width:72,

@@ -17,7 +17,7 @@ import Diagram, {
   CustomShape,
 } from "devextreme-react/diagram";
 
-import { createArrayStore } from "src/common/data/apiClient";
+import { createArrayStore } from "src/common/data/mongo-api";
 import { renderSwitch, renderEnd } from "./LineSegmentSchema";
 const colors = [
   // "#03A9F4",
