@@ -25,11 +25,8 @@ class PlatformDirectRepository : Repository {
             jdbcUrl = connectionString
             maximumPoolSize = 20
         }
-
         private val dataSource = HikariDataSource(config)
-
         fun getConnection(): Connection = dataSource.connection
-
         fun close() = dataSource.close()
     }
 
