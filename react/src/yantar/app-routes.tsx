@@ -1,7 +1,7 @@
 import {
   Empty, Test
 } from "./pages/_index";
-import { withNavigationWatcher } from "./contexts/navigation";
+import { withNavigationWatcher } from "src/common/contexts/navigation";
 
 const routes = [
   {

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import "../dx-styles.scss";
 import LoadPanel from "devextreme-react/load-panel";
-import { NavigationProvider } from "./contexts/navigation";
+import { NavigationProvider } from "../common/contexts/navigation";
 import { useScreenSizeClass } from "./utils/media-query";
 import Content from "./Content";
 import messages from "devextreme/localization/messages/ru.json";
@@ -14,7 +14,7 @@ import { QueryParamProvider } from "use-query-params";
 import { ReactRouter6Adapter } from "use-query-params/adapters/react-router-6";
 import { CookiesProvider, useCookies } from "react-cookie";
 
-import { KeycloakAuthProvider } from "./contexts/keycloak";
+import { KeycloakAuthProvider } from "../common/contexts/keycloak";
 import { ObjectTree, Sandbox } from "./pages/_index";
 
 

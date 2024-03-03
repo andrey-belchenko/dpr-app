@@ -8,7 +8,7 @@ import type { HeaderProps } from "../../types";
 import DropDownButton from "devextreme-react/drop-down-button";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-import { useKeycloakAuth } from "src/mrskc/contexts/keycloak";
+import { useKeycloakAuth } from "src/common/contexts/keycloak";
 import DialogOk from "../DialogOk";
 
 // import { useKeycloak } from "@react-keycloak/web";

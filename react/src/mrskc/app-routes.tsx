@@ -35,7 +35,7 @@ import {
   RunLineMatching,
   LineMatchingResults,
 } from "./pages/_index";
-import { withNavigationWatcher } from "./contexts/navigation";
+import { withNavigationWatcher } from "../common/contexts/navigation";
 import LineEquipmentSchema from "./pages/LineEquipmentSchema";
 import { element } from "prop-types";
 import UserPage from "./pages/UserPage";

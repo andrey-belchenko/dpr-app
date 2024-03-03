@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import TreeView from "devextreme-react/tree-view";
 import { navigation } from "../../app-navigation";
-import { useNavigation } from "../../contexts/navigation";
+import { useNavigation } from "../../../common/contexts/navigation";
 import { useScreenSize } from "../../utils/media-query";
 import "./SideNavigationMenu.scss";
 import type { SideNavigationMenuProps } from "../../types";
 
 import * as events from "devextreme/events";
 import Hint from "src/mrskc/components/Hint";
-import { useKeycloakAuth } from "src/mrskc/contexts/keycloak";
+import { useKeycloakAuth } from "src/common/contexts/keycloak";
 
 export default function SideNavigationMenu(
   props: React.PropsWithChildren<SideNavigationMenuProps>

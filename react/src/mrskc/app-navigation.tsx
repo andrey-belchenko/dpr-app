@@ -1,4 +1,4 @@
-import { KeycloakRole } from "./contexts/keycloak";
+import { KeycloakRole } from "../common/contexts/keycloak";
 
 export const navigation = [
   {
