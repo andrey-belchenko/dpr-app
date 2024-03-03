@@ -1,4 +1,4 @@
-import Grid from "src/common/components/grid/Grid";
+import { Grid } from "src/common/components";
 const columns = [
   {
     dataField: "РЭС",
@@ -34,7 +34,6 @@ const columns = [
       },
     ],
   },
-  
   {
     dataField: "ВремяСоздания",
     caption: "Создан",
@@ -52,7 +51,6 @@ export default function Component() {
       title="Диспетчерские пометки"
       countByColumn="РЭС"
       columns={columns}
-    >
-    </Grid>
+    ></Grid>
   );
 }

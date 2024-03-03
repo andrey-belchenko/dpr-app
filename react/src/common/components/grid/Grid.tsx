@@ -30,12 +30,8 @@ import Button from "devextreme-react/button";
 import { exportGridToExcel } from "src/mrskc/utils/export-grid";
 import { clearState } from "src/mrskc/utils/grid-state";
 import { useQueryParam, StringParam } from "use-query-params";
-import { useNavigate, useLocation } from "react-router-dom";
 import dxDataGrid from "devextreme/ui/data_grid";
 import { customProcessColumns, processColumns } from "src/mrskc/utils/grid-columns";
-import { element } from "prop-types";
-import notify from "devextreme/ui/notify";
-import CheckBox from "devextreme-react/check-box";
 import { useCookies } from "react-cookie";
 import { Switch } from "devextreme-react/switch";
 
