@@ -3,7 +3,7 @@ import  {
   MasterDetail,
 } from "devextreme-react/data-grid";
 import BlockedMessageDetail from "./BlockedMessageDetail";
-import Grid from "src/mrskc/components/Grid";
+import Grid from "src/common/components/grid/Grid";
 
 const columns = [
   { dataField: "idSource", caption: "Источник" },

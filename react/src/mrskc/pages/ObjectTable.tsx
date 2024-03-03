@@ -2,7 +2,7 @@ import Button from "devextreme-react/button";
 import React from "react";
 import { useCallback, useMemo, useState } from "react";
 import ButtonCell from "src/mrskc/components/ButtonCell";
-import Grid from "src/mrskc/components/Grid";
+import Grid from "src/common/components/grid/Grid";
 import PopupWindow from "src/mrskc/components/PopupWindow";
 import EquipmentFiles from "./EquipmentFiles";
 import { RowPreparedEvent } from "devextreme/ui/data_grid";

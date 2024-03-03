@@ -1,5 +1,5 @@
 import { MasterDetail } from "devextreme-react/data-grid";
-import Grid from "src/mrskc/components/Grid";
+import Grid from "src/common/components/grid/Grid";
 import ExchangeLogDetail from "./ExchangeLogDetail";
 
 

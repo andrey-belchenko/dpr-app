@@ -14,7 +14,7 @@ import {
   getScriptParams,
 } from "src/mrskc/data/apiClient";
 import { useCookies } from "react-cookie";
-import Grid from "src/mrskc/components/Grid";
+import Grid from "src/common/components/grid/Grid";
 import LineMatchingResultsDetail from "./LineMatchingResultsDetail";
 
 const scriptExecutionColName = "sys_scriptExecution";

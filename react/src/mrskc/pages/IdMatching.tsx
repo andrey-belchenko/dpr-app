@@ -11,7 +11,7 @@ import DialogOkCancel from "../components/DialogOkCancel";
 import { v4 as uuidv4 } from "uuid";
 import ButtonWithHint from "src/mrskc/components/ButtonWithHint";
 import DialogOk from "src/mrskc/components/DialogOk";
-import Grid, { GridRef } from "src/mrskc/components/Grid";
+import Grid, { GridRef } from "src/common/components/grid/Grid";
 import * as utils from "./matchingUtils";
 import { getHostUrl } from "src/common/utils/host-url";
 const columns = [

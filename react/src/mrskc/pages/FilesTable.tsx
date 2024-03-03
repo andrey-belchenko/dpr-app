@@ -1,6 +1,6 @@
 import Button from "devextreme-react/button";
 import ButtonCell from "src/mrskc/components/ButtonCell";
-import Grid from "src/mrskc/components/Grid";
+import Grid from "src/common/components/grid/Grid";
 import { downloadFile } from "src/mrskc/data/apiClient";
 const columns = [
   {
