@@ -1,0 +1,471 @@
+@import "./themes/generated/variables.base.scss";
+
+$side-panel-min-width: 60px;
+
+.app {
+  background-color: darken($base-bg, 5.00);
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.side-nav-outer-toolbar .dx-drawer {
+  // height: calc(100% - 56px)
+  height: calc(100%)
+}
+
+.app .content {
+  line-height: 1.5;
+  h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.app .content-block {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.screen-x-small .content-block {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.responsive-paddings {
+  padding: 20px;
+
+  .screen-large & {
+    padding: 40px;
+  }
+}
+
+.dx-card.wide-card {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+.with-footer > .dx-scrollable-wrapper >
+.dx-scrollable-container > .dx-scrollable-content {
+  height: 100%;
+
+  & > .dx-scrollview-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
+
+
+
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/////////// customization
+.grid{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  max-width: unset !important;
+}
+
+.diagram{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 1px; // подгонка чтобы не вылазил лишний скролбар
+}
+
+
+.treeList{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+
+.menu-container{
+  position: absolute;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  min-width: 100px;
+}
+
+.dx-diagram{
+  height: unset;
+  border: none;
+}
+
+.dx-treeview-item{
+    margin-bottom: 0.5px;
+}
+
+.dx-treeview-node[aria-level="1"]{
+  border-bottom: none!important;
+}
+
+.dx-datagrid-revert-tooltip {  
+  display: none;  
+}  
+
+.dx-treelist-revert-tooltip {  
+  display: none;  
+}  
+
+
+// .dx-toolbar-label > div {
+//   // overflow: hidden;
+//   // text-overflow: ellipsis;
+//   // white-space: nowrap;
+//   // margin: 3px -5px -3px 10px;
+//   margin-top: 3px;
+//   margin-bottom:-3px;
+//   margin-left: 5px;
+//   // padding: 0 5px;
+// }
+
+code{
+  white-space: pre-wrap!important;
+}
+
+td[role=columnheader] {  
+  text-align: center!important  
+}
+
+// "react-code-blocks"
+button{
+  border: none;
+}
+
+.react-json-view{
+  font: inherit!important;
+  padding: 10px!important;
+  background-color: white!important;
+}
+
+
+//https://supportcenter.devexpress.com/ticket/details/t476681/devextreme-angular-2-make-popup-title-center-align
+.dx-toolbar.dx-widget.dx-visibility-change-handler.dx-collection.dx-popup-title .dx-toolbar-before {
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.dx-popup-title.dx-toolbar .dx-toolbar-label {
+  font-weight: normal;
+}
+
+
+.df-text{
+  color: rgba(0, 0, 0,0.8);
+}
+
+.df-button-info {
+  top: 4px;
+  margin-left: -22px;
+  color: rgba(0, 0, 0, 0.35);
+  z-index: 600;
+  position: relative;
+  font-size: 16px;
+}
+
+
+.df-button-with-info .dx-button-text{
+  text-overflow: unset!important;
+  padding-right: 20px;
+}
+
+.df-menu-hint-icon{
+   font-size: 14px!important;
+   color: rgba(0, 0, 0, 0.35) !important;
+   width: 30px !important;
+}
+
+.df-hint-icon {
+  font-size: 18px!important;
+  color: rgba(0, 0, 0, 0.35) !important;
+  margin: 0px 7px 0px 0px;
+}
+
+
+.df-vertical-center-container {
+  display: flex;
+  align-items: center;
+}
+
+
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background: rgba(0,0,0,0.07);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color:rgba(0, 0, 0, 0.20);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0.12);
+}
+
+
+.react-json-view{
+   background-color: white!important;
+}
+
+
+
+.react-split > .split-container > .splitter .default-splitter{
+  background-color: white;
+  border-color: rgb(230, 230, 230);
+}
+
+.df-toolbar{
+  border-color: rgb(230, 230, 230);
+}
+
+
+.dx-row > td {
+  border-bottom-width: 1px !important;
+}
+.df-row-pale > td{
+  color: rgba(0, 0, 0,0.4) !important;
+}
+
+
+
+.df-row-pale.dx-row-focused > td:not(.dx-focused):not(.dx-cell-modified){
+  color: lighten($base-accent, 45%) !important;
+  background-color: lighten($base-accent, 20%) !important;
+  border-bottom-color: lighten($base-accent, 20%) !important;
+}
+
+.df-row-matched > td {
+  color: lighten($base-accent, 45%) !important;
+  background-color: lighten($base-accent, 20%) !important;
+  border-bottom-color: lighten($base-accent, 20%) !important;
+}
+
+.df-row-pale.dx-row-focused.df-row-not-matched > td:not(.dx-focused):not(.dx-cell-modified){
+  color: rgba(0, 0, 0,0.4) !important;
+}
+
+.dx-row-focused.df-row-not-matched > td:not(.dx-focused):not(.dx-cell-modified){
+  color: $base-text-color !important;
+  background-color: rgb(235, 235,235 )  !important;
+  border-bottom-color: $base-border-color !important;
+}
+
+// не отображать чекбоксы н null значением в гриде
+.dx-cell-focus-disabled .dx-state-readonly.dx-checkbox-indeterminate{
+  visibility:hidden!important;
+}
+
+// исправление кнопок в гриде, пи выделении обводилось белым квадратом
+.dx-treelist-rowsview .dx-row-focused.dx-data-row .dx-command-edit .dx-link:focus {
+  background-color:inherit !important;
+  color:inherit !important;
+}
+
+.df-grid-button{
+  color: $base-accent !important;
+}
+
+
+.dx-row-focused .df-grid-button{
+  color: inherit !important;
+}
+
+.df-grid-button-container{
+  margin-top: -10px;
+  margin-right: -6px;
+  margin-left: -6px;
+  margin-bottom: -10px;
+  text-align: left;
+
+}
+
+.dx-toolbar .dx-button.dx-button-mode-contained{
+  box-shadow: 0 1px 3px rgba(0,0,0,.24) !important;
+}
+
+.df-grid-button-container .dx-button {
+  box-shadow: none !important;
+}
+
+.df-grid-button-container .dx-button .dx-icon{
+  color:rgba($base-text-color, alpha($base-text-color) * 0.7);
+}
+.df-grid-button-container > *{
+  margin-right: 5px;
+}
+
+.df-grid-button-container {
+  margin-right: -10px;
+}
+
+.df-grid-button-cell > .df-grid-button-container{
+   margin-top: -6px;
+   margin-right: -10px;
+   margin-bottom: -10px;
+   text-align: right;
+}
+
+// .df-grid-button-cell.df-text-align-center > .df-grid-button-container{
+//   text-align: center;
+// }
+
+
+
+.df-grid-button-cell > .df-grid-button-container > *{
+  margin-left: 5px;
+}
+
+.df-grid-button-cell{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+// не было 2-й рамки после зафиксированных колонок в заголовке грида а в стоках была, выглядело криво
+// это правило исправляет ситуацию, но возможно дает побочные эффекты, не проверял закрепление нескольких колонок, закрепление слева
+.dx-datagrid .dx-datagrid-content-fixed .dx-datagrid-table td {
+  border-right-width: 2px !important;
+}
+
+.df-popup-window-content{
+  //  background-color: red;
+   position: absolute;
+  top:44px;
+  bottom:0;
+  left: 0;
+  right: 0;
+
+}
+
+.df-toolbar-switch{
+  margin-top:8px;
+}
+
+
+.df-menu-item-indent-1{
+  padding-left: 15px;
+}
+
+.df-menu-item-indent-2{
+  padding-left: 30px;
+}
+
+.df-menu-item-indent-3{
+  padding-left: 45px;
+}
+
+.df-menu-item-indent-4{
+  padding-left: 60px;
+}
+
+.dx-form{
+  background-color: white;
+}
+
+.dx-texteditor.dx-editor-filled::after {
+  border-bottom-color: $base-border-color;
+}
+
+.dx-texteditor.dx-editor-filled.dx-state-hover::after {
+  border-bottom-color:  darken($base-border-color, 5.00)
+}
+
+.dx-texteditor.dx-editor-underlined::after {
+  border-bottom-color: $base-border-color;
+}
+
+.dx-texteditor.dx-editor-underlined.dx-state-hover::after {
+  border-bottom-color:  darken($base-border-color, 5.00)
+}
+
+
+
+
+.dx-scrollable-content {
+  background-color: white;
+}
+
+.df-monaco-editor{
+  height: 100vh;
+}
+
+.dx-layout-manager .dx-field-item {
+  padding-bottom: 0px;
+}
+.dx-layout-manager .dx-field-item:not(.dx-first-row) {
+  padding-top: 0px !important
+}
+.dx-form .dx-field-item-label-text {
+  padding-left: 10px;
+}
+
+.dx-form .dx-texteditor.dx-editor-filled {
+  background-color: white!important;
+}
+
+.df-toolbar-field-label{
+  color:rgba($base-text-color, alpha($base-text-color) * 0.7);
+  padding-right: 3px;
+}
+
+.df-box-item-centred-content{
+  display: flex;
+  height: 100% ;
+  justify-content:center;
+  align-items:center;
+}
+
+
+// .dx-tab .dx-tab-text {
+//   text-transform: none !important;
+// }
+
+
+.df-form-tab-panel.dx-tabpanel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+
