@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Toolbar, { Item } from "devextreme-react/toolbar";
 import Button from "devextreme-react/button";
-import UserPanel from "../user-panel/UserPanel";
 import "./Header.scss";
 // import { Template } from "devextreme-react/core/template";
 import SelectBox from "devextreme-react/select-box";

@@ -6,7 +6,6 @@ import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import "./dx-styles.scss";
 import LoadPanel from "devextreme-react/load-panel";
 import { NavigationProvider } from "./contexts/navigation";
-import { AuthProvider, useAuth } from "./contexts/auth";
 import { useScreenSizeClass } from "./utils/media-query";
 import Content from "./Content";
 import messages from "devextreme/localization/messages/ru.json";
