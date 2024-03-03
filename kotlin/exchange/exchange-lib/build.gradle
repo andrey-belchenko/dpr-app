@@ -16,6 +16,8 @@ dependencies {
     implementation("org.reflections:reflections:0.10.2")
     implementation ("org.jetbrains.kotlin:kotlin-reflect:1.5.10")
     implementation ('com.google.code.gson:gson:2.10.1')
-
+//    implementation('com.cockroachlabs:cockroachdb-jdbc:2023.12.03')
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+    implementation 'org.postgresql:postgresql:42.2.23'
 
 }

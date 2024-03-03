@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="exchange-sandbox-dev" type="JetRunConfigurationType">
     <option name="MAIN_CLASS_NAME" value="cc.datafabric.exchange.app.con.rabbit.incoming.MainKt" />
-    <module name="adapter.exchange-sandbox.main" />
+    <module name="exchange.exchange-sandbox.main" />
     <shortenClasspath name="NONE" />
     <extension name="net.ashald.envfile">
       <option name="IS_ENABLED" value="true" />
