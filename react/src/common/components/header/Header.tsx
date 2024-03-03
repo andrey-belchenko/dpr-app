@@ -9,12 +9,9 @@ import DropDownButton from "devextreme-react/drop-down-button";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useKeycloakAuth } from "src/common/contexts/keycloak";
-import DialogOk from "../../../mrskc/components/DialogOk";
+import DialogOk from "../dialog/DialogOk";
 import { useAppSettings } from "src/common/contexts/app-settings";
 
-// import { useKeycloak } from "@react-keycloak/web";
-
-// import { useAuth } from "src/mrskc/contexts/auth";
 
 export default function Header({
   menuToggleEnabled,

@@ -14,8 +14,8 @@ import "./Form.scss";
 
 import * as utils from "./matchingUtils";
 import { BooleanParam, useQueryParam } from "use-query-params";
-import DialogOkCancel from "src/mrskc/components/DialogOkCancel";
-import DialogOk from "src/mrskc/components/DialogOk";
+import DialogOkCancel from "src/common/components/dialog/DialogOkCancel";
+import DialogOk from "src/common/components/dialog/DialogOk";
 import { sendModifyRequest } from "src/mrskc/data/apiClient";
 import { RowPreparedEvent } from "devextreme/ui/tree_list";
 const matchingColumns = [

@@ -7,10 +7,10 @@ import {
 } from "src/mrskc/data/apiClient";
 import { Workbook } from "exceljs";
 import notify from "devextreme/ui/notify";
-import DialogOkCancel from "../components/DialogOkCancel";
+import DialogOkCancel from "../../common/components/dialog/DialogOkCancel";
 import { v4 as uuidv4 } from "uuid";
 import ButtonWithHint from "src/mrskc/components/ButtonWithHint";
-import DialogOk from "src/mrskc/components/DialogOk";
+import DialogOk from "src/common/components/dialog/DialogOk";
 import Grid, { GridRef } from "src/common/components/grid/Grid";
 import * as utils from "./matchingUtils";
 import { getHostUrl } from "src/common/utils/host-url";
