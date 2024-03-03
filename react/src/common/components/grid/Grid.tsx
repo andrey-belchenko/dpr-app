@@ -249,7 +249,7 @@ const component = React.forwardRef<GridRef, GridProps>((props, ref) => {
       <DataGrid
         ref={gridRef}
         // remoteOperations={true}
-        className={"grid"}
+        className={"df-grid"}
         dataSource={data}
         showBorders={false}
         focusedRowEnabled={true}
