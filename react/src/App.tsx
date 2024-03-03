@@ -17,12 +17,8 @@ import { CookiesProvider, useCookies } from "react-cookie";
 import { KeycloakAuthProvider } from "./contexts/keycloak";
 import { ObjectTree, Sandbox } from "./pages/_index";
 
-function App() {
-  return <Content />;
-}
 
-
-export default function Root() {
+export default function App() {
   const [initialized, setInitialized] = useState(false);
   useEffect(() => {
     loadMessages(messages);
@@ -40,7 +36,7 @@ export default function Root() {
             <QueryParamProvider adapter={ReactRouter6Adapter}>
               <NavigationProvider>
                 <div className={`app ${screenSizeClass}`}>
-                  <App />
+                <Content />
                 </div>
               </NavigationProvider>
             </QueryParamProvider>
