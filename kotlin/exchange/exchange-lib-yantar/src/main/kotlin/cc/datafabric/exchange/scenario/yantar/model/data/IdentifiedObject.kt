@@ -1,13 +1,16 @@
 //generated from profile
-package cc.datafabric.linesapp.scenario.model.data
+package cc.datafabric.exchange.scenario.yantar.model.data
 
-import cc.datafabric.linesapp.sys.model.ModelObject
+import cc.datafabric.exchange.cim.model.ModelObject
+import cc.datafabric.exchange.cim.model.Links
+import cc.datafabric.exchange.cim.model.LinksDelegate
 import cc.datafabric.exchange.cim.model.LinkDelegate
 import cc.datafabric.exchange.cim.model.ValueDelegate
 
 @Suppress("PropertyName", "unused")
 open class IdentifiedObject : ModelObject() {
-    var ParentObject: IdentifiedObject? by LinkDelegate()
+    val ChildObjects: Links<IdentifiedObject> by LinksDelegate(inverseProperty = IdentifiedObject::ParentObject)
+    var ParentObject: IdentifiedObject? by LinkDelegate(inverseProperty = IdentifiedObject::ChildObjects)
     var name: String? by ValueDelegate()
     var aliasName: String? by ValueDelegate()
     var mRID: String? by ValueDelegate()
