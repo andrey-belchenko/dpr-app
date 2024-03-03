@@ -68,6 +68,7 @@ export default function SideNavigationMenu(
     navigationData: { currentPath },
   } = useNavigation();
 
+
   const treeViewRef = useRef<TreeView>(null);
   const wrapperRef = useRef();
   const getWrapperRef = useCallback(
@@ -92,10 +93,8 @@ export default function SideNavigationMenu(
     }
 
     if (currentPath !== undefined) {
-      // todo костыль
-      let path = currentPath.replace("/:lineCode", "/VS010-0010089");
-      treeView.selectItem(path);
-      treeView.expandItem(path);
+      treeView.selectItem(currentPath);
+      treeView.expandItem(currentPath);
     }
 
     if (compactMode) {
