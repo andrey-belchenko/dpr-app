@@ -10,36 +10,6 @@ import {
   LineEquipmentSchema
 } from "./pages/_index";
 
-// export default function Content() {
-//   return (
-//     <SideNavBarLayout title={appInfo.title}>
-//       <Routes>
-//         {routes.map(({ path, element }) => (
-//           <Route
-//             key={path}
-//             path={path}
-//             element={element}
-//           />
-//         ))}
-//         <Route
-//           path='*'
-//           element={<Navigate to='home' />}
-//         />
-//       </Routes>
-//     </SideNavBarLayout>
-//   );
-// }
-
-
-  // {
-  //   path: "/LineSegmentSchema/:lineCode",
-  //   element: LineSegmentSchema,
-  // },
-  // {
-  //   path: "/LineSpanSchema/:lineCode",
-  //   element: LineSpanSchema,
-  // },
-
 export default function Content() {
   return (
     <Routes>
