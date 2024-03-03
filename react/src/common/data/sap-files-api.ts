@@ -3,7 +3,7 @@ import CustomStore from "devextreme/data/custom_store";
 import notify from "devextreme/ui/notify";
 import { Interface } from "readline";
 import { Cookies } from "react-cookie";
-import { getDatabase, getQueryApiUrl } from "./mongo-api";
+import { getDatabase, getQueryApiUrl } from "./exchange-processor-api";
 // import env from "react-dotenv";
 
 // export interface DataSourceOptions {

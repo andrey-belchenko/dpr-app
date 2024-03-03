@@ -8,7 +8,7 @@ import ReactFlow, {
 } from "reactflow";
 
 import "reactflow/dist/style.css";
-import { getArray } from "src/common/data/mongo-api";
+import { getArray } from "src/common/data/exchange-processor-api";
 import { getLayoutedElements } from "src/mrskc/pages/SandboxUtils";
 
 const LayoutFlow = () => {

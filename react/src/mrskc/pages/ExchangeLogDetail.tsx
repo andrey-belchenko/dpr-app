@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactJson from "react-json-view";
 import XmlBlock from "src/mrskc/components/XmlBlock";
-import { getObject } from "src/common/data/mongo-api";
+import { getObject } from "src/common/data/exchange-processor-api";
 // import XMLViewer from 'react-xml-viewer'
 import xmlFormat from 'xml-formatter';
 

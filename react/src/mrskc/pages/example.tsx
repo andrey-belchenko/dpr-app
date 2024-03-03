@@ -6,7 +6,7 @@ import DataGrid, {
   SearchPanel,
   HeaderFilter,
 } from "devextreme-react/data-grid";
-import { createDataSource } from "src/common/data/mongo-api";
+import { createDataSource } from "src/common/data/exchange-processor-api";
 
 export default function Component() {
   return (
