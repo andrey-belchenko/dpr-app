@@ -1,5 +1,5 @@
 //generated from profile
-package cc.datafabric.exchange.scenario.yantar.model.data
+package cc.datafabric.exchange.scenario.model.data
 
 
 @Suppress("PropertyName", "unused")

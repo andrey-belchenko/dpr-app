@@ -2,7 +2,7 @@ package cc.datafabric.exchange.cim.repository.common
 
 import cc.datafabric.exchange.cim.repository.common.dto.*
 import cc.datafabric.linesapp.sys.repository.common.dto.*
-import cc.datafabric.linesapp.sys.repository.common.query.Query
+import cc.datafabric.exchange.cim.repository.common.query.Query
 
 interface Repository {
     fun findEntities(filter: RepositoryEntityFilter): Iterable<RepositoryEntity>

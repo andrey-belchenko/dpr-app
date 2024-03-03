@@ -12,7 +12,7 @@ import kotlin.reflect.jvm.javaField
 object ReflectionUtils {
 
     private fun packageName(): String {
-        return ModelObject::class.java.packageName.replace(".sys.model", ".scenario.model.data")
+        return ModelObject::class.java.packageName.replace(".cim.model", ".scenario.model.data")
     }
 
     private var classes: MutableMap<String, KClass<*>> = mutableMapOf()

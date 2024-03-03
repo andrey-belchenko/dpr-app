@@ -1,13 +1,15 @@
 package cc.datafabric.exchange.app.api.yantar
 
 import cc.datafabric.exchange.cim.repository.common.Repository
-import cc.datafabric.exchange.scenario.yantar.model.data.Substation
-import cc.datafabric.linesapp.sys.repository.common.query.Query
+import cc.datafabric.exchange.scenario.model.data.Substation
+import cc.datafabric.exchange.cim.repository.common.query.Query
+import cc.datafabric.exchange.cim.utils.DataSetMapper
 import io.quarkus.runtime.Startup
+import view.data.PowerCenter
 import javax.inject.Inject
 import javax.inject.Singleton
-import javax.ws.rs.GET
-import javax.ws.rs.Path
+import javax.ws.rs.*
+import javax.ws.rs.core.MediaType
 import javax.ws.rs.core.Response
 
 @Singleton
@@ -20,14 +22,27 @@ class Main {
     @GET
     @Path("test")
     fun getScriptParams(): Response {
-
-        val query = Query()
-            .filterById("Substation_94e0c02b-dcf9-4673-bfa3-7b32a2acaddf")
-            .include(Substation::infSupplyCenter)
-        val repoDs= repository.executeQueries(listOf(query))
-        val result = repoDs.toJson()
-        return Response.ok(result).build()
+        return Response.ok("ok").build()
     }
+
+    @GET
+    @Path("/powerCenters/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    fun getPowerCenter(@PathParam("id") id: String): PowerCenter {
+        val query = Query()
+            .filterById(id)
+            .include(Substation::infSupplyCenter)
+        val repoDs = repository.executeQueries(listOf(query))
+        val dataSet = DataSetMapper.toDataSet(repoDs)
+        val substation = dataSet.get(id) as? Substation ?: throw NotFoundException()
+        return PowerCenter(
+            id = substation.id,
+            name = substation.name,
+            aliasName = substation.aliasName,
+            yearOfPlugin = substation.infSupplyCenter?.yearOfPlugin
+        )
+    }
+
 }
 
 

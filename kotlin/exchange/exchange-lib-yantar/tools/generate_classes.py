@@ -247,7 +247,7 @@ def generateKotlinClasses(classInfoList: list[ClassInfo], folder: str):
 
     package = "cc.datafabric.exchange"
     sysPackage = f"{package}.cim.model"
-    dataPackage = f"{package}.scenario.yantar.model.data"
+    dataPackage = f"{package}.scenario.model.data"
     for classInfo in classInfoList:
         if classInfo.name not in systemClassMap and (classInfo.isDefined):
             # if classInfo.name=="Switch":
