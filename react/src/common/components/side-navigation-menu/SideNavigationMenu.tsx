@@ -7,7 +7,7 @@ import "./SideNavigationMenu.scss";
 import type { SideNavigationMenuProps } from "../../types";
 
 import * as events from "devextreme/events";
-import Hint from "src/mrskc/components/Hint";
+import Hint from "src/common/components/Hint";
 import { useKeycloakAuth } from "src/common/contexts/keycloak";
 
 export default function SideNavigationMenu(

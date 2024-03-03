@@ -1,5 +1,5 @@
 import { Button } from "devextreme-react/button";
-import Hint from "./Hint";
+import Hint from "../../common/components/Hint";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 export default function Component({ icon, text, onClick, children }: any) {
