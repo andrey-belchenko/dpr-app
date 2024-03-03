@@ -34,7 +34,7 @@ export default function App() {
         <KeycloakAuthProvider>
           <Router>
             <QueryParamProvider adapter={ReactRouter6Adapter}>
-              <AppSettingsProvider menuData={menuData}>
+              <AppSettingsProvider menuData={menuData} allowDbSelection={true}>
                 <NavigationProvider>
                   <div className={`app ${screenSizeClass}`}>
                     <Content />

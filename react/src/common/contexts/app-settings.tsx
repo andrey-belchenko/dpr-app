@@ -10,19 +10,24 @@ import { useCookies } from "react-cookie";
 
 interface AppSettingsProps {
   menuData: any[];
+  allowDbSelection: boolean;
 }
 
 interface AppSettingsParams extends AppSettingsProps {
   children: React.ReactNode;
 }
 
-const AppSettingsContext = createContext<AppSettingsProps>({ menuData: [] });
+const AppSettingsContext = createContext<AppSettingsProps>({
+  menuData: [],
+  allowDbSelection: false,
+});
 
-const AppSettingsProvider = ({ menuData, children }: AppSettingsParams) => {
+const AppSettingsProvider = ({ menuData, allowDbSelection, children }: AppSettingsParams) => {
   return (
     <AppSettingsContext.Provider
       value={{
         menuData: menuData,
+        allowDbSelection: allowDbSelection
       }}
     >
       {children}

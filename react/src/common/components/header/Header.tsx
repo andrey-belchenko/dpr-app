@@ -10,6 +10,7 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useKeycloakAuth } from "src/common/contexts/keycloak";
 import DialogOk from "../../../mrskc/components/DialogOk";
+import { useAppSettings } from "src/common/contexts/app-settings";
 
 // import { useKeycloak } from "@react-keycloak/web";
 
@@ -24,14 +25,16 @@ export default function Header({
   // const { keycloak, initialized } = useKeycloak();
 
   const auth = useKeycloakAuth();
-  let defaultDatabase = "exchange"; // временно
 
+
+
+  let {allowDbSelection} =  useAppSettings()
+  let defaultDatabase = "exchange"; // временно
   let dbList = ["exchange", "exchange-demo"];
   if (process.env.REACT_APP_adp_isDev == "true") {
     dbList = ["exchange", "exchange-sukhanov", "exchange-test","exchange-demo"];
     // defaultDatabase = "exchange";
   }
-
   const [databases] = useState(dbList);
   const [cookies, setCookie] = useCookies(["database"]);
 
@@ -89,7 +92,7 @@ export default function Header({
         <Item
           location={"after"}
           locateInMenu={"never"}
-          // visible={process.env.REACT_APP_adp_isDev == "true"}
+          visible={allowDbSelection}
         >
           <DropDownButton
             text={cookies.database || defaultDatabase}
