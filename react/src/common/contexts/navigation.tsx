@@ -1,5 +1,5 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
-import type { NavigationContextType } from '../../mrskc/types';
+import type { NavigationContextType } from '../types';
 
 const NavigationContext = createContext<NavigationContextType>({} as NavigationContextType);
 const useNavigation = () => useContext(NavigationContext);

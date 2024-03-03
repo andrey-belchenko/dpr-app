@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
-import type { Handle } from '../../mrskc/types';
+import type { Handle } from '../types';
 
 export const useScreenSize = () => {
   const [screenSize, setScreenSize] = useState(getScreenSize());

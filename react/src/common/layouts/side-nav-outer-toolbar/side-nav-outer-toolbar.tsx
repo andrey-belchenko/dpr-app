@@ -2,11 +2,11 @@ import Drawer from "devextreme-react/drawer";
 import ScrollView from "devextreme-react/scroll-view";
 import React, { useState, useCallback, useRef } from "react";
 import { useNavigate } from "react-router";
-import { Header, SideNavigationMenu, Footer } from "../../components";
+import { Header, SideNavigationMenu, Footer } from "../../../mrskc/components";
 import "./side-nav-outer-toolbar.scss";
-import { useScreenSize } from "../../../common/utils/media-query";
+import { useScreenSize } from "../../utils/media-query";
 import { Template } from "devextreme-react/core/template";
-import { useMenuPatch } from "../../../common/utils/patches";
+import { useMenuPatch } from "../../utils/patches";
 import type { SideNavToolbarProps } from "../../types";
 
 export default function SideNavOuterToolbar({
