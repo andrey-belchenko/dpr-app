@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import TreeView from "devextreme-react/tree-view";
-import { navigation } from "../../../mrskc/app-navigation";
 import { useNavigation } from "../../contexts/navigation";
 import { useScreenSize } from "../../utils/media-query";
 import "./SideNavigationMenu.scss";
@@ -9,6 +8,7 @@ import type { SideNavigationMenuProps } from "../../types";
 import * as events from "devextreme/events";
 import Hint from "src/common/components/Hint";
 import { useKeycloakAuth } from "src/common/contexts/keycloak";
+import { useAppSettings } from "src/common/contexts/app-settings";
 
 export default function SideNavigationMenu(
   props: React.PropsWithChildren<SideNavigationMenuProps>
@@ -46,8 +46,10 @@ export default function SideNavigationMenu(
     return filtered;
   }
 
+  const {menuData} =  useAppSettings()
+
   function normalizePath() {
-    const filtered = processMenuItems(navigation);
+    const filtered = processMenuItems(menuData);
 
     return filtered.map((item) => ({
       ...item,

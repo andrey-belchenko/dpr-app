@@ -13,7 +13,8 @@ import { QueryParamProvider } from "use-query-params";
 import { ReactRouter6Adapter } from "use-query-params/adapters/react-router-6";
 import { CookiesProvider, useCookies } from "react-cookie";
 import { KeycloakAuthProvider } from "src/common/contexts/keycloak";
-
+import { menuData } from "./app-navigation";
+import { AppSettingsProvider } from "src/common/contexts/app-settings";
 
 export default function App() {
   const [initialized, setInitialized] = useState(false);
@@ -31,11 +32,13 @@ export default function App() {
         <KeycloakAuthProvider>
           <Router>
             <QueryParamProvider adapter={ReactRouter6Adapter}>
-              <NavigationProvider>
-                <div className={`app ${screenSizeClass}`}>
-                <Content />
-                </div>
-              </NavigationProvider>
+              <AppSettingsProvider menuData={menuData}>
+                <NavigationProvider>
+                  <div className={`app ${screenSizeClass}`}>
+                    <Content />
+                  </div>
+                </NavigationProvider>
+              </AppSettingsProvider>
             </QueryParamProvider>
           </Router>
         </KeycloakAuthProvider>

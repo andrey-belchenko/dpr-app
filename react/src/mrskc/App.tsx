@@ -16,8 +16,8 @@ import { CookiesProvider, useCookies } from "react-cookie";
 
 import { KeycloakAuthProvider } from "../common/contexts/keycloak";
 import { ObjectTree, Sandbox } from "./pages/_index";
-
-
+import { AppSettingsProvider } from "src/common/contexts/app-settings";
+import { menuData } from "./app-navigation";
 export default function App() {
   const [initialized, setInitialized] = useState(false);
   useEffect(() => {
@@ -34,11 +34,13 @@ export default function App() {
         <KeycloakAuthProvider>
           <Router>
             <QueryParamProvider adapter={ReactRouter6Adapter}>
-              <NavigationProvider>
-                <div className={`app ${screenSizeClass}`}>
-                <Content />
-                </div>
-              </NavigationProvider>
+              <AppSettingsProvider menuData={menuData}>
+                <NavigationProvider>
+                  <div className={`app ${screenSizeClass}`}>
+                    <Content />
+                  </div>
+                </NavigationProvider>
+              </AppSettingsProvider>
             </QueryParamProvider>
           </Router>
         </KeycloakAuthProvider>

@@ -1,5 +1,5 @@
 
-export const navigation = [
+export const menuData = [
   {
     text: "Главная",
     path: "/home",
