@@ -23,3 +23,9 @@
   color: rgb(120, 120, 120);
   font-weight:inherit;
 }
+
+.container {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+}
