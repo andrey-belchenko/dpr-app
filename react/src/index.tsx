@@ -2,7 +2,7 @@ import './polyfills';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './yantar/App';
+import App from './mrskc/App';
 import reportWebVitals from './reportWebVitals';
 
 
