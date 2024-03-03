@@ -7,7 +7,7 @@ import DataGrid, {
   FilterRow,
   Lookup
 } from 'devextreme-react/data-grid';
-import { createDataSource } from "src/mrskc/data/apiClient";
+import { createDataSource } from "src/common/data/apiClient";
 export default function Task() {
   return (
     <React.Fragment>

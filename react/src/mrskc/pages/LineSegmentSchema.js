@@ -17,7 +17,7 @@ import Diagram, {
   CustomShape,
 } from "devextreme-react/diagram";
 
-import { createArrayStore } from "src/mrskc/data/apiClient";
+import { createArrayStore } from "src/common/data/apiClient";
 
 export const baseColor = "#03A9F4";
 export const redColor = "#FF8282";

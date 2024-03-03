@@ -12,7 +12,7 @@ import {
   getObject,
   getScriptMetadata,
   getScriptParams,
-} from "src/mrskc/data/apiClient";
+} from "src/common/data/apiClient";
 import { useCookies } from "react-cookie";
 import Grid from "src/common/components/grid/Grid";
 import LineMatchingResultsDetail from "./LineMatchingResultsDetail";

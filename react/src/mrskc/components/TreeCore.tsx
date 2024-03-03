@@ -18,11 +18,11 @@ import TreeList, {
 } from "devextreme-react/tree-list";
 import Button from "devextreme-react/button";
 
-import { createDataSource } from "src/mrskc/data/apiClient";
+import { createDataSource } from "src/common/data/apiClient";
 // import Button from "devextreme-react/button";
 
 import dxTreeList from "devextreme/ui/tree_list";
-import { customProcessColumns, processColumns } from "src/mrskc/utils/grid-columns";
+import { customProcessColumns, processColumns } from "src/common/utils/grid-columns";
 
 // Child component
 interface TreeCoreProps {

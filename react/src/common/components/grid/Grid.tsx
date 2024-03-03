@@ -25,13 +25,13 @@ import DataGrid, {
   Sorting,
   RemoteOperations,
 } from "devextreme-react/data-grid";
-import { createDataSource, getArray } from "src/mrskc/data/apiClient";
+import { createDataSource, getArray } from "src/common/data/apiClient";
 import Button from "devextreme-react/button";
-import { exportGridToExcel } from "src/mrskc/utils/export-grid";
-import { clearState } from "src/mrskc/utils/grid-state";
+import { exportGridToExcel } from "src/common/utils/export-grid";
+import { clearState } from "src/common/utils/grid-state";
 import { useQueryParam, StringParam } from "use-query-params";
 import dxDataGrid from "devextreme/ui/data_grid";
-import { customProcessColumns, processColumns } from "src/mrskc/utils/grid-columns";
+import { customProcessColumns, processColumns } from "src/common/utils/grid-columns";
 import { useCookies } from "react-cookie";
 import { Switch } from "devextreme-react/switch";
 

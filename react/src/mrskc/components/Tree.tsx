@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { clearState } from "src/mrskc/utils/grid-state";
+import { clearState } from "src/common/utils/grid-state";
 import { useQueryParam, StringParam } from "use-query-params";
 import dxTreeList from "devextreme/ui/tree_list";
 import TreeCore, { TreeCoreRef } from "./TreeCore";

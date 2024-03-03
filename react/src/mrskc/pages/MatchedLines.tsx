@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import ButtonCell from "src/mrskc/components/ButtonCell";
 import Grid from "src/common/components/grid/Grid";
 import PopupWindow from "src/mrskc/components/PopupWindow";
-import { downloadFile } from "src/mrskc/data/apiClient";
+import { downloadFile } from "src/common/data/apiClient";
 import { getHostUrl } from "src/common/utils/host-url";
 
 const openSchema = (pageName: string, code: string) => {
