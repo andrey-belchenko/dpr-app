@@ -4,9 +4,9 @@ import React, { useState, useCallback, useRef } from "react";
 import { useNavigate } from "react-router";
 import { Header, SideNavigationMenu, Footer } from "../../components";
 import "./side-nav-outer-toolbar.scss";
-import { useScreenSize } from "../../utils/media-query";
+import { useScreenSize } from "../../../common/utils/media-query";
 import { Template } from "devextreme-react/core/template";
-import { useMenuPatch } from "../../utils/patches";
+import { useMenuPatch } from "../../../common/utils/patches";
 import type { SideNavToolbarProps } from "../../types";
 
 export default function SideNavOuterToolbar({

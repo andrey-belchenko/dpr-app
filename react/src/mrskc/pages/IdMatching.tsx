@@ -13,7 +13,7 @@ import ButtonWithHint from "src/mrskc/components/ButtonWithHint";
 import DialogOk from "src/mrskc/components/DialogOk";
 import Grid, { GridRef } from "src/mrskc/components/Grid";
 import * as utils from "./matchingUtils";
-import { getHostUrl } from "src/mrskc/utils/host-url";
+import { getHostUrl } from "src/common/utils/host-url";
 const columns = [
   {
     dataField: "name",

@@ -5,7 +5,7 @@ import ButtonCell from "src/mrskc/components/ButtonCell";
 import Grid from "src/mrskc/components/Grid";
 import PopupWindow from "src/mrskc/components/PopupWindow";
 import { downloadFile } from "src/mrskc/data/apiClient";
-import { getHostUrl } from "src/mrskc/utils/host-url";
+import { getHostUrl } from "src/common/utils/host-url";
 
 const openSchema = (pageName: string, code: string) => {
   let url = `${getHostUrl()}/#/${pageName}/${code}`;
