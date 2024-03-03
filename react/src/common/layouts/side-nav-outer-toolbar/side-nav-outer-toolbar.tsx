@@ -2,7 +2,7 @@ import Drawer from "devextreme-react/drawer";
 import ScrollView from "devextreme-react/scroll-view";
 import React, { useState, useCallback, useRef } from "react";
 import { useNavigate } from "react-router";
-import { Header, SideNavigationMenu, Footer } from "../../../mrskc/components";
+import { SideNavigationMenu, Header, Footer } from "src/common/components";
 import "./side-nav-outer-toolbar.scss";
 import { useScreenSize } from "../../utils/media-query";
 import { Template } from "devextreme-react/core/template";
@@ -52,7 +52,6 @@ export default function SideNavOuterToolbar({
 
   const onNavigationChanged = useCallback(
     (pars: any) => {
-
       // { itemData, event, node } = pars
 
       let node = pars.node;
@@ -62,7 +61,7 @@ export default function SideNavOuterToolbar({
       if (!event) {
         // todo: химия чтобы обновить заголовок при старте.
         // наверное лучше переделать
-  
+
         let titles = [];
         let item = node;
         while (item) {

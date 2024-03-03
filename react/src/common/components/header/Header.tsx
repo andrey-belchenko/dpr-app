@@ -4,12 +4,12 @@ import Button from "devextreme-react/button";
 import "./Header.scss";
 // import { Template } from "devextreme-react/core/template";
 import SelectBox from "devextreme-react/select-box";
-import type { HeaderProps } from "../../../common/types";
+import type { HeaderProps } from "../../types";
 import DropDownButton from "devextreme-react/drop-down-button";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useKeycloakAuth } from "src/common/contexts/keycloak";
-import DialogOk from "../DialogOk";
+import DialogOk from "../../../mrskc/components/DialogOk";
 
 // import { useKeycloak } from "@react-keycloak/web";
 
