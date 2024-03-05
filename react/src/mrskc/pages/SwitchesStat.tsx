@@ -1,4 +1,4 @@
-import Grid from "src/common/components/grid/Grid";
+import Grid from "src/mrskc/components/Grid";
 const columns = [
   {
     dataField: "РЭС",

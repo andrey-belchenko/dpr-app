@@ -15,7 +15,7 @@ import {
   getScriptParams,
   sendModifyRequest,
   sendModifyRequestGetJson,
-} from "src/common/data/exchange-processor-api";
+} from "src/mrskc/data/exchange-processor-api";
 import { useCookies } from "react-cookie";
 import notify from "devextreme/ui/notify";
 

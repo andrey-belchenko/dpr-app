@@ -2,9 +2,9 @@ import Button from "devextreme-react/button";
 import DataGrid from "devextreme-react/data-grid";
 import React, { useEffect, useRef, useState } from "react";
 import ButtonCell from "src/mrskc/components/ButtonCell";
-import Grid, { GridRef } from "src/common/components/grid/Grid";
-import { createArrayStore, getArray } from "src/common/data/exchange-processor-api";
-import { downloadFile } from "src/common/data/sap-files-api";
+import Grid, { GridRef } from "src/mrskc/components/Grid";
+import { createArrayStore, getArray } from "src/mrskc/data/exchange-processor-api";
+import { downloadFile } from "src/mrskc/data/sap-files-api";
 const columns = [
   {
     // width:72,

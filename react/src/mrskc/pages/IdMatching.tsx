@@ -4,14 +4,14 @@ import { Editing, Item } from "devextreme-react/data-grid";
 import {
   sendModifyRequest,
   sendModifyRequestGetJson,
-} from "src/common/data/exchange-processor-api";
+} from "src/mrskc/data/exchange-processor-api";
 import { Workbook } from "exceljs";
 import notify from "devextreme/ui/notify";
 import DialogOkCancel from "../../common/components/dialog/DialogOkCancel";
 import { v4 as uuidv4 } from "uuid";
 import ButtonWithHint from "src/mrskc/components/ButtonWithHint";
 import DialogOk from "src/common/components/dialog/DialogOk";
-import Grid, { GridRef } from "src/common/components/grid/Grid";
+import Grid, { GridRef } from "src/mrskc/components/Grid";
 import * as utils from "./matchingUtils";
 import { getHostUrl } from "src/common/utils/host-url";
 const columns = [

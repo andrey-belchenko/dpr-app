@@ -12,9 +12,9 @@ import {
   getObject,
   getScriptMetadata,
   getScriptParams,
-} from "src/common/data/exchange-processor-api";
+} from "src/mrskc/data/exchange-processor-api";
 import { useCookies } from "react-cookie";
-import Grid from "src/common/components/grid/Grid";
+import Grid from "src/mrskc/components/Grid";
 import LineMatchingResultsDetail from "./LineMatchingResultsDetail";
 
 const scriptExecutionColName = "sys_scriptExecution";
