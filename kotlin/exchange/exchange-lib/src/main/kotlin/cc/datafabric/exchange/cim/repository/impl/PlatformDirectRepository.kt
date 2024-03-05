@@ -11,9 +11,9 @@ import java.sql.Connection
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
 import com.google.gson.Gson
+import com.google.gson.JsonNull
 import com.google.gson.JsonObject
-
-
+import com.google.gson.JsonPrimitive
 
 
 class PlatformDirectRepository : Repository {
@@ -32,7 +32,7 @@ class PlatformDirectRepository : Repository {
 
     private  fun addFilter(whereClause:StringBuilder,field:String,values: Iterable<String>?) {
         if (values?.any() == true) {
-            val value = values!!.joinToString(",") { "'$it'" }
+            val value = values.joinToString(",") { "'$it'" }
             whereClause.appendLine("""and "$field" in ($value)""")
         }
     }
@@ -54,16 +54,26 @@ class PlatformDirectRepository : Repository {
         """.trimIndent()
         Logger.traceData(query)
         val resultSet = statement.executeQuery(query)
+        var count = 0
         while (resultSet.next()) {
-            val repositoryEntity = RepositoryEntity(resultSet.getString("iri"),resultSet.getString("type"))
+            val id = resultSet.getString("iri")
+            val repositoryEntity = RepositoryEntity(id,resultSet.getString("type"))
             val modelText = resultSet.getString("model")
             val gson = Gson()
             val modelData: JsonObject = gson.fromJson(modelText, JsonObject::class.java)
             modelData.entrySet().forEach { (key, value) ->
-                repositoryEntity.attributes[key] =  value
+                if (value is JsonPrimitive) {
+                    repositoryEntity.attributes[key] = value.asString
+                } else if (value == JsonNull.INSTANCE) {
+                    repositoryEntity.attributes[key] = null
+                } else {
+                    throw IllegalArgumentException("Cant parse entity $id. Invalid value of field $key: $value")
+                }
             }
             result[repositoryEntity.id] =  repositoryEntity
+            count++
         }
+        Logger.traceData("count:$count")
         statement.close()
         connection.close()
         Logger.traceFunEnd()
@@ -91,6 +101,7 @@ class PlatformDirectRepository : Repository {
         """.trimIndent()
         Logger.traceData(query)
         val resultSet = statement.executeQuery(query)
+        var count = 0
         while (resultSet.next()) {
             val item = RepositoryLink(
                 fromId = resultSet.getString("fromIri"),
@@ -100,7 +111,9 @@ class PlatformDirectRepository : Repository {
                 toType = resultSet.getString("toType"),
             )
             result.add(item)
+            count++
         }
+        Logger.traceData("count:$count")
         statement.close()
         connection.close()
         Logger.traceFunEnd()

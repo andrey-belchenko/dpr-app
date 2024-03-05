@@ -3,6 +3,7 @@ import kotlin.reflect.KProperty
 
 class LinkDelegate<T : ModelObject?>(private val inverseProperty: KProperty<*>? = null) {
     private var value: ModelObject? = null
+    @Suppress("UNCHECKED_CAST")
     operator fun getValue(thisRef: ModelObject?, property: KProperty<*>): T {
         return value as T
     }
@@ -22,6 +23,9 @@ class LinkDelegate<T : ModelObject?>(private val inverseProperty: KProperty<*>? 
                 thisRef?.changed()
             }
         }
+    }
 
+    fun getInverseProperty(): KProperty<*>? {
+        return inverseProperty
     }
 }

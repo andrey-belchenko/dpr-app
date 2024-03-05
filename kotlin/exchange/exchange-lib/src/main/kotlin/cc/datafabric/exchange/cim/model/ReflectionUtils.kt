@@ -1,12 +1,10 @@
 package cc.datafabric.exchange.cim.model
 
 import org.reflections.Reflections
-import kotlin.reflect.KClass
-import kotlin.reflect.KMutableProperty
-import kotlin.reflect.KProperty
+import kotlin.reflect.*
 import kotlin.reflect.full.createInstance
 import kotlin.reflect.full.isSubclassOf
-import kotlin.reflect.KType
+import kotlin.reflect.jvm.isAccessible
 import kotlin.reflect.jvm.javaField
 
 object ReflectionUtils {
@@ -152,6 +150,16 @@ object ReflectionUtils {
 
     fun getObjectClassName(obj: ModelObject): String {
         return obj.javaClass.simpleName
+    }
+
+    fun getInverseProperty(property: KProperty<*>): KProperty<*>? {
+        property.apply { isAccessible = true }
+        val declaringClass: Class<*> = property.javaField!!.declaringClass
+        val instance = declaringClass.kotlin.createInstance() as ModelObject
+        @Suppress("UNCHECKED_CAST")
+        val delegate = (property as KMutableProperty1<ModelObject, *>).getDelegate(instance)
+        val linkDelegate = (delegate as LinkDelegate<*>)
+        return linkDelegate.getInverseProperty()
     }
 
 

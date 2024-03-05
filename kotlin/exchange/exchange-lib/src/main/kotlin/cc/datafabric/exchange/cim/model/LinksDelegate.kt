@@ -13,7 +13,8 @@ class LinksDelegate <T: ModelObject>(private val inverseProperty: KProperty<*>?=
         }
         return value as Links<T>
     }
-//    operator fun setValue(thisRef: ModelObject?, property: KProperty<*>, value: Links<T>) {
-//        this.value = value
-//    }
+
+    fun getInverseProperty(): KProperty<*>? {
+        return inverseProperty
+    }
 }
