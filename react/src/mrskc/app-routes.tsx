@@ -34,6 +34,7 @@ import {
   TopologyIntegrityCheck,
   RunLineMatching,
   LineMatchingResults,
+  ProcessorStatus,
 } from "./pages/_index";
 import { withNavigationWatcher } from "../common/contexts/navigation";
 import LineEquipmentSchema from "./pages/LineEquipmentSchema";
@@ -180,7 +181,12 @@ const routes = [
   {
     path: "/LineMatchingResults",
     element: LineMatchingResults,
+  },
+  {
+    path: "/ProcessorStatus",
+    element: ProcessorStatus,
   }
+
 
   // {
   //     path: '',

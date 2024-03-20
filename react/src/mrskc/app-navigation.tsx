@@ -141,6 +141,10 @@ export const menuData = [
     roles: [KeycloakRole.Инженер, KeycloakRole.Администратор, KeycloakRole.Эксперт],
     items: [
       {
+        text: "Состояние сервисов",
+        path: "/ProcessorStatus",
+      },
+      {
         text: "Входящие сооб. КИСУР",
         path: "/IncomingMessages",
       },
@@ -164,3 +168,5 @@ export const menuData = [
   },
  
 ];
+
+

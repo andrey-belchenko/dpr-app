@@ -31,6 +31,7 @@ export { default as MatchedLines } from './MatchedLines';
 export { default as TopologyIntegrityCheck } from './TopologyIntegrityCheck';
 export { default as RunLineMatching } from './RunLineMatching';
 export { default as LineMatchingResults } from './LineMatchingResults';
+export { default as ProcessorStatus } from './ProcessorStatus';
 
 // export { default as LineSegmentSchema } from '../sandbox/TestDiagram';
 export { default as LineSegmentSchema } from './LineSegmentSchema';
