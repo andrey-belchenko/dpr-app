@@ -11,3 +11,468 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button > i {
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+#root > * > * > .top {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 8px;
+  box-shadow: 0 2px 2px -2px #bfbfbf;
+  background: #005999;
+}
+.top > .menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.top  .menu  .avatar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top  .menu  .avatar .user{
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+}
+
+.top  .menu  .avatar .user .username{
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.auth-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top > .logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.top > .logo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #fff;
+  margin-left: 16px;
+}
+
+.top > .logo > div > h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.top > .logo > div > span {
+    font-size: 0.9rem;
+}
+
+.uploader-wrapper .ant-space-item:first-child {
+  width: 100%;
+}
+.finder-top {
+  display: flex;
+  flex-grow: 1;
+  gap: 16px;
+  padding: 0 8px;
+}
+.nested-document {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nested-document:hover {
+  background-color: #40A9FF;
+  padding-left: 3px;
+}
+.object-row {
+  display: flex;
+  gap: 8px;
+}
+.object-row > .actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.object-row > .actions > button {
+  margin: 0;
+  padding: 2px;
+  box-shadow: unset;
+  border: 0;
+  background: none;
+}
+
+.object-row > .item {
+  display: flex;
+  flex-direction: column;
+  line-height: 18px;
+  min-height: 40px;
+  justify-content: center;
+}
+
+.object-row > .item {
+  flex-grow: 1;
+  padding: 4px 60px 4px 4px;
+  overflow: hidden;
+  white-space: break-spaces;
+}
+
+.object-row > .item > .name{
+  font-size: 18px;
+  word-wrap: break-word;
+  display: inline-block;
+  width: 340px;
+}
+
+.object-row > .item > .des {
+  font-size: 12px;
+  color: #8c8c8c;
+  word-wrap: break-word;
+  display: inline-block;
+  width: 340px;
+}
+
+.menu-item-list {
+  margin: 8px -8px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.menu-item-list > ul {
+  border: 0 !important;
+  padding: 16px 0 0 0;
+}
+
+.menu-item-list > ul >  li {
+  width: 100% !important;
+  height: unset !important;
+  line-height: unset !important;
+  padding: 8px !important;
+  margin: 0 !important;
+}
+
+.form-message {
+   height: 25px;
+}
+
+.load-ind {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.permissions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+.permissions > h4 {
+   margin: 0;
+}
+
+.permissions > .actions {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+  right: -12px;
+  top: -5px;
+  z-index: 10;
+}
+
+.permissions > .set {
+  overflow-y: auto;
+  max-height: 800px;
+  overflow-x: hidden;
+}
+
+.permission {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.permission > .actions {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+  right: -10px;
+  top: -5px;
+  z-index: 20;
+}
+
+.permission > div.flag-set {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.permission > .ant-divider {
+  margin: 0 0 16px 0;
+}
+.permission > .divider {
+  display: flex;
+  flex-direction: column;
+}
+.permission > .divider > span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+.permission > .divider > span.des {
+  font-size: 0.7rem;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+.permission > div > div.flag {
+  display: flex;
+  gap: 16px;
+}
+
+.permission > .users {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.permission > .users > span {
+  font-size: 0.75rem;
+  opacity: .7;
+}
+
+.permission > .users > h5 {
+  margin: 0;
+}
+
+.permission > .roles {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.permission > .roles > h5 {
+  margin: 0;
+}
+
+.permission > .roles > span {
+  font-size: 0.75rem;
+  opacity: .7;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.form-data {
+
+}
+
+.form-data .form-rec{
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+
+.excel-columns {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  overflow: auto;
+  max-height: 700px;
+}
+.excel-columns .field {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+
+.excel-columns .field .ant-form-item-margin-offset {
+  margin-bottom: 0  !important;
+}
+
+
+.excel-columns .ant-form-item-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.excel-columns  .ant-form-item-control-input-content {
+  display: flex;
+  gap: 8px;
+}
+
+.excel-columns  .ant-form-item-label {
+  text-align: left;
+}
+
+.csv-columns {
+  display: grid;
+  gap: 32px;
+  overflow: auto;
+  max-height: 700px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.csv-columns .field {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+
+.csv-columns .field .ant-form-item-margin-offset {
+  margin-bottom: 0  !important;
+}
+
+.csv-columns .field .ant-form-item:first-child {
+  flex-grow: 1;
+}
+
+.csv-columns .field label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.csv-columns .ant-form-item-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.csv-columns  .ant-form-item-control-input-content {
+  display: flex;
+  gap: 8px;
+}
+
+.csv-columns  .ant-form-item-label {
+  text-align: left;
+}
+
+.form-rec  .replace-block{
+  display: flex;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  gap: 4px;
+  padding: 4px;
+  height: 34px;
+}
+
+.form-rec  .replace-block input {
+   width: 40px;
+}
+
+.task-view-full > .task-view {
+  width: unset !important;
+}
+
+.task-view {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 8px;
+  width: 540px;
+}
+
+.task-view .info {
+  display: flex;
+  gap: 6px;
+}
+
+.task-view .info .text {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 6px;
+}
+.task-view .info .text .title {
+  font-weight: bold;
+}
+.task-view .info .text .message.error {
+   color: #e60000;
+}
+
+.task-view .info .actions {
+  display: flex;
+  gap: 8px;
+}
+
+.suspend{
+  color: #1f48ec;
+}
+.failed{
+  color: #e60000;
+}
+.processing{
+  color: #0ab003;
+}
+.finished {
+  color: #0ab003;
+}
+
+.dialog-btn {
+
+}
+
+.dialog-btn-hide {
+    display: none;
+}
+
+.info-task {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  line-height: 20px;
+}
+
+.data-table .ant-table-content {
+  max-height: 500px;
+  overflow-y: auto !important;
+  font-size: 12px;
+}
+
+.import {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.import .ant-upload-list {
+  flex-grow: 1;
+}
+
+.import .ant-upload-list .ant-upload-list-item {
+  margin-top: 0;
+  padding: 6px;
+  border-radius: 6px;
+  height: unset;
+}
+
