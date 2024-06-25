@@ -62,7 +62,7 @@ function chart(title: string, dataSource: any) {
 export default function Home() {
   return (
     <React.Fragment>
-      <Box direction="col" className="box">
+      {/* <Box direction="col" className="box">
         <Item ratio={2} baseSize={0}>
           <Box direction="row" width="100%" height="100%">
             <Item ratio={1}>
@@ -79,7 +79,7 @@ export default function Home() {
             <Item ratio={1}>{chart("Предупреждения [пример]", [])}</Item>
           </Box>
         </Item>
-      </Box>
+      </Box> */}
     </React.Fragment>
   );
 }
