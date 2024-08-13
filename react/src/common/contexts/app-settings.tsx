@@ -7,6 +7,7 @@ import React, {
   useEffect,
 } from "react";
 import { useCookies } from "react-cookie";
+import { useLocation } from "react-router-dom";
 
 interface AppSettingsProps {
   menuData: any[];
@@ -23,6 +24,15 @@ const AppSettingsContext = createContext<AppSettingsProps>({
 });
 
 const AppSettingsProvider = ({ menuData, allowDbSelection, children }: AppSettingsParams) => {
+
+  // TODO исправление проблемы возникающей из-за того что кейклок добавляет #iis=... к url
+  const location = useLocation();
+  useEffect(() => {
+    if (window.location.hash.includes("iss=")) {
+      window.location.hash = "";
+    }
+  }, [location]);
+
   return (
     <AppSettingsContext.Provider
       value={{

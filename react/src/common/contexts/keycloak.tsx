@@ -8,11 +8,12 @@ import React, {
 } from "react";
 import { useCookies } from "react-cookie";
 
+
 export enum KeycloakRole {
-  Аналитик = "Аналитик",
-  Администратор = "Администратор",
-  Инженер = "Инженер",
-  Эксперт = "Эксперт",
+  Аналитик = "Voronezh_rs20",
+  Администратор = "Voronezh_rs20_Администратор",
+  Инженер = "Voronezh_rs20_Инженер",
+  Эксперт = "Voronezh_rs20_Эксперт",
 }
 
 // тут есть химия связанная с особенностями поведения keycloak-js в сочетании с HashRouter и другими провайдерами
@@ -80,9 +81,9 @@ const KeycloakAuthProvider: React.FC = ({ children }) => {
   } else {
     let roles = [];
     for (let role of cookies.auth.roles) {
-      if (Object.values(KeycloakRole).includes(role)) {
+      // if (Object.values(KeycloakRole).includes(role)) {
         roles.push(role);
-      }
+      // }
     }
     return (
       <KeycloakAuthContext.Provider
